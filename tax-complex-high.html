@@ -433,7 +433,1830 @@
     font-size: 14px;
     border: 1px solid #e8e8e8;
     border-radius: 8px;
-…28259 tokens truncated…
+    background: #fff;
+    color: #333;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath d='M2 4l4 4 4-4' fill='none' stroke='%23999' stroke-width='1.5'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 30px;
+  }
+  .form-select:focus { outline: none; border-color: var(--tax-blue); }
+  .form-select.prefilled { background-color: #f0f7ff; }
+  .form-upload {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    background: #f8f9fa;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    font-size: 13px;
+    color: #999;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .form-upload.uploaded {
+    border-style: solid;
+    border-color: #52c41a;
+    background: #f6ffed;
+    color: #52c41a;
+    cursor: default;
+  }
+  .form-upload-add {
+    width: 32px; height: 32px;
+    background: var(--tax-blue-light);
+    color: var(--tax-blue);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .upload-progress-wrap { width: 100%; margin-top: 8px; }
+  .upload-progress-bar-bg { height: 6px; background: #e8e8e8; border-radius: 3px; overflow: hidden; }
+  .upload-progress-bar { height: 100%; width: 0%; background: var(--tax-blue); border-radius: 3px; transition: width 0.1s linear; }
+  .upload-progress-text { font-size: 12px; color: #999; margin-top: 4px; text-align: center; }
+  .form-optional { font-size: 11px; color: #999; margin-left: 4px; }
+  .form-required-note { font-size: 11px; color: #ff4d4f; margin-left: 2px; }
+  .form-section-header { font-size: 14px; font-weight: 600; color: #333; padding-bottom: 8px; border-bottom: 1px solid #f0f0f0; margin-bottom: 8px; }
+
+  /* ===== 项目选择页 ===== */
+  .project-select-page { padding: 0 16px 24px; }
+  .project-select-title { font-size: 20px; font-weight: 600; text-align: center; margin: 24px 0 8px; color: var(--tax-text); }
+  .project-select-subtitle { font-size: 13px; color: var(--tax-text2); text-align: center; margin-bottom: 20px; }
+  .project-select-card { background: white; border-radius: 12px; padding: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; border: 1.5px solid var(--tax-blue); }
+  .project-select-icon { width: 40px; height: 40px; border-radius: 10px; background: var(--tax-blue-light); display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0; }
+  .project-select-text { flex: 1; }
+  .project-select-text h4 { font-size: 15px; font-weight: 500; color: var(--tax-text); margin-bottom: 2px; }
+  .project-select-text p { font-size: 12px; color: var(--tax-text2); }
+  .project-select-check { width: 22px; height: 22px; border-radius: 50%; background: var(--tax-blue); color: white; display: flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
+
+  .ps-item { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: white; border-bottom: 0.5px solid #eee; cursor: pointer; }
+  .ps-item:last-child { border-bottom: none; }
+  .ps-item.selected { background: #f0f7ff; }
+  .ps-check { width: 22px; height: 22px; border-radius: 50%; border: 2px solid #ccc; display: flex; align-items: center; justify-content: center; font-size: 12px; color: transparent; flex-shrink: 0; }
+  .ps-item.selected .ps-check { border-color: var(--tax-blue); background: var(--tax-blue); color: white; }
+  .ps-icon { width: 36px; height: 36px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .ps-text { flex: 1; }
+  .ps-text h4 { font-size: 15px; font-weight: 500; color: var(--tax-text); }
+
+  /* ===== APP首页模拟 ===== */
+  .app-home-page { background: var(--tax-bg); padding-bottom: 72px; }
+  .app-home-search { background: white; padding: 8px 16px; display: flex; align-items: center; gap: 8px; border-bottom: 0.5px solid var(--tax-border); }
+  .app-home-search-box { flex: 1; height: 36px; background: #f5f6fa; border-radius: 18px; display: flex; align-items: center; padding: 0 12px; gap: 6px; color: var(--tax-text3); font-size: 14px; }
+  .app-home-search-box input { border: none; background: transparent; flex: 1; font-size: 14px; outline: none; color: var(--tax-text); }
+  .app-home-notice { background: #fff8e1; padding: 8px 16px; display: flex; align-items: center; gap: 8px; font-size: 12px; color: #e65100; }
+  .app-home-banner { margin: 12px 16px; background: linear-gradient(135deg, #ff9500 0%, #ff6b00 100%); border-radius: 12px; padding: 16px; color: white; position: relative; overflow: hidden; }
+  .app-home-banner h3 { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+  .app-home-banner p { font-size: 12px; opacity: 0.9; }
+  .app-home-section-title { font-size: 15px; font-weight: 600; color: var(--tax-text); margin: 16px 16px 10px; display: flex; align-items: center; justify-content: space-between; }
+  .app-home-section-title a { font-size: 13px; color: var(--tax-text3); font-weight: 400; }
+  .app-home-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; background: white; margin: 0 16px; border-radius: 12px; overflow: hidden; }
+  .app-home-grid-item { display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 14px 4px; cursor: pointer; }
+  .app-home-grid-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  .app-home-grid-name { font-size: 12px; color: var(--tax-text); text-align: center; }
+  .app-home-service-card { background: white; margin: 0 16px 12px; border-radius: 12px; padding: 16px; display: flex; align-items: center; gap: 12px; cursor: pointer; border: 1px solid var(--tax-border); }
+  .app-home-service-icon { width: 48px; height: 48px; border-radius: 12px; background: var(--tax-blue-light); display: flex; align-items: center; justify-content: center; font-size: 24px; flex-shrink: 0; }
+  .app-home-service-text { flex: 1; }
+  .app-home-service-text h4 { font-size: 15px; font-weight: 500; color: var(--tax-text); margin-bottom: 4px; }
+  .app-home-service-text p { font-size: 12px; color: var(--tax-text2); }
+  .app-home-service-btn { background: var(--tax-blue); color: white; font-size: 13px; padding: 6px 14px; border-radius: 14px; border: none; cursor: pointer; flex-shrink: 0; }
+  .app-home-service-btn:active { opacity: 0.8; }
+  .app-home-bottom-nav { position: absolute; bottom: 0; left: 0; width: 100%; height: 56px; background: white; border-top: 0.5px solid var(--tax-border); display: flex; align-items: center; justify-content: space-around; z-index: 50; }
+  .app-home-nav-item { display: flex; flex-direction: column; align-items: center; gap: 2px; font-size: 10px; color: var(--tax-text3); }
+  .app-home-nav-item.active { color: var(--tax-blue); }
+  .app-home-nav-icon { font-size: 22px; }
+
+  /* ===== app首页滑动指示器 ===== */
+  .app-home-slider-track {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    margin: 0 16px 12px;
+    padding: 0 16px;
+  }
+  .app-home-slider-indicator {
+    position: absolute;
+    top: -4px;
+    width: 48%;
+    height: 48px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(48,114,246,0.12), rgba(91,155,213,0.12));
+    border: 2px solid var(--tax-blue);
+    transition: left 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+
+  /* ===== 专项附加扣除服务页 ===== */
+  .deduct-service-page { background: var(--tax-bg); padding: 0 16px 24px; }
+  .deduct-service-hero { background: linear-gradient(135deg, #3072f6 0%, #5b9bd5 100%); border-radius: 16px; padding: 24px 20px; margin: 16px 0; color: white; text-align: center; }
+  .deduct-service-hero h2 { font-size: 20px; font-weight: 600; margin-bottom: 6px; }
+  .deduct-service-hero p { font-size: 13px; opacity: 0.9; margin-bottom: 16px; }
+  .deduct-service-stats { display: flex; justify-content: center; gap: 32px; margin-bottom: 20px; }
+  .deduct-service-stat { text-align: center; }
+  .deduct-service-stat-num { font-size: 22px; font-weight: 700; }
+  .deduct-service-stat-label { font-size: 11px; opacity: 0.85; margin-top: 2px; }
+  .deduct-service-btn-group { display: flex; gap: 12px; justify-content: center; }
+  .deduct-service-btn { flex: 1; max-width: 140px; height: 44px; border-radius: 22px; border: none; font-size: 15px; font-weight: 500; cursor: pointer; }
+  .deduct-service-btn.primary { background: white; color: var(--tax-blue); }
+  .deduct-service-btn.secondary { background: rgba(255,255,255,0.2); color: white; }
+  .deduct-service-btn:active { opacity: 0.85; }
+  .deduct-service-list { background: white; border-radius: 12px; overflow: hidden; margin-top: 8px; }
+  .deduct-service-list-item { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 0.5px solid var(--tax-border); cursor: pointer; }
+  .deduct-service-list-item:last-child { border-bottom: none; }
+  .deduct-service-list-icon { width: 36px; height: 36px; border-radius: 8px; background: var(--tax-blue-light); display: flex; align-items: center; justify-content: center; font-size: 18px; }
+  .deduct-service-list-text { flex: 1; font-size: 14px; color: var(--tax-text); }
+  .deduct-service-list-arrow { color: var(--tax-text3); font-size: 14px; }
+
+  /* ===== 政策浮窗 ===== */
+  .policy-float-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.45); z-index: 300; opacity: 0; pointer-events: none; transition: opacity 0.3s ease; visibility: hidden; }
+  .policy-float-overlay.show { opacity: 1; pointer-events: auto; visibility: visible; }
+  .policy-float-panel { position: fixed; bottom: 0; left: 0; width: 100%; max-height: 85vh; background: white; border-radius: 20px 20px 0 0; z-index: 301; transform: translateY(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; overflow: hidden; }
+  .policy-float-panel.show { transform: translateY(0); }
+  .policy-float-header { padding: 16px 16px 8px; text-align: center; border-bottom: 0.5px solid var(--tax-border); flex-shrink: 0; }
+  .policy-float-header h3 { font-size: 16px; font-weight: 600; color: var(--tax-text); }
+  .policy-float-close { position: absolute; top: 12px; right: 16px; font-size: 18px; color: var(--tax-text3); cursor: pointer; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; }
+  .policy-float-tabs { display: flex; overflow-x: auto; gap: 4px; padding: 8px 12px; border-bottom: 0.5px solid var(--tax-border); flex-shrink: 0; scrollbar-width: none; }
+  .policy-float-tabs::-webkit-scrollbar { display: none; }
+  .policy-float-tab { flex-shrink: 0; padding: 6px 12px; border-radius: 14px; font-size: 13px; color: var(--tax-text2); background: #f5f6fa; border: none; cursor: pointer; white-space: nowrap; }
+  .policy-float-tab.active { background: var(--tax-blue); color: white; }
+  .policy-float-body { flex: 1; overflow-y: auto; padding: 16px; -webkit-overflow-scrolling: touch; }
+  .policy-float-body h4 { font-size: 15px; font-weight: 600; color: var(--tax-text); margin-bottom: 12px; }
+  .policy-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 16px; }
+  .policy-table th, .policy-table td { border: 1px solid #e0e0e0; padding: 10px 12px; text-align: left; line-height: 1.5; }
+  .policy-table th { background: var(--tax-blue-light); color: var(--tax-blue); font-weight: 500; width: 80px; }
+  .policy-table td { color: var(--tax-text2); }
+</style>
+</head>
+<body>
+<div class="app" id="app">
+<div class="page on" id="pg-consent">
+  <div class="consent-page">
+    <div class="consent-card">
+      <div class="consent-logo">🏛️</div>
+      <div class="consent-title">用户体验研究</div>
+      <div class="consent-body">
+        <p>您好！欢迎参与本研究。</p>
+        <p>您将体验个人所得税专项附加扣除的填报流程。请根据提供的虚拟人物信息完成操作，体验结束后请填写问卷。</p>
+        <p>整个过程约需 5-10 分钟。</p>
+      </div>
+      <button class="consent-btn" onclick="go('info')">我已了解，进入体验</button>
+    </div>
+  </div>
+</div><div class="page off-right" id="pg-info">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('consent')">‹</div>
+    <div class="nav-title">填报参考信息</div>
+    <div></div>
+  </div>
+  <div class="home-sim-notice" style="margin:12px 16px 0;">
+    ⚠️ 本页面为模拟演示，不代表真实政务服务系统。以下为虚拟人物"王明"的模拟信息，填报时请参考使用。
+  </div>
+  <div class="info-profile-card" style="margin:12px 16px 0;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);border-radius:12px;padding:16px;color:white;">
+    <div style="font-size:14px;font-weight:600;margin-bottom:8px;">您正在<strong>模拟</strong>的人物是<strong>王明</strong></div>
+    <div style="font-size:13px;line-height:1.7;opacity:0.95;">王明，42岁，2005年本科毕业后进入广州华南智造科技有限公司工作，从基层技术员一步步成长为技术部门主管，至今已有近20年工作经验。已婚，妻子刘婷是中学教师，育有一女王一诺（9岁，在读小学三年级）。三年前在天河区购置了婚房，目前仍需按月偿还商业贷款。父亲王建国已退休，和母亲一起居住老家，王明每月需承担部分赡养费用。为提升管理能力，他目前正在攻读某高校的工商管理硕士学位（MBA），利用业余时间完成课程学习和研究。</div>
+  </div>
+  <div class="info-page-body">
+    <div class="info-page-section">
+    <div class="info-page-section-title">📄 个人基本信息</div>
+    <div class="info-page-item">姓名：王明</div>
+    <div class="info-page-item">身份证号：110101198306120039</div>
+    <div class="info-page-item">手机号：13900005678</div>
+    <div class="info-page-item">任职受雇单位：广州华南智造科技有限公司</div>
+    <div class="info-page-item">主要工作城市：广东省广州市</div>
+    <div class="info-page-item">婚姻状况：已婚</div>
+  </div>
+  <div class="info-page-section">
+    <div class="info-page-section-title">💑 配偶信息</div>
+    <div class="info-page-item">配偶姓名：刘婷</div>
+    <div class="info-page-item">配偶身份证号：110101198506240045</div>
+  </div>
+  <div class="info-page-section">
+    <div class="info-page-section-title">📚 子女教育信息</div>
+    <div class="info-page-item">子女姓名：王一诺</div>
+    <div class="info-page-item">子女身份证号：110101201604180052</div>
+    <div class="info-page-item">当前受教育阶段：义务教育阶段—小学</div>
+    <div class="info-page-item">受教育起止：2022年9月 至 2028年8月</div>
+    <div class="info-page-item">就读学校：广州市天河区第一小学</div>
+    <div class="info-page-item">扣除分配比例：本人50%，配偶50%</div>
+  </div>
+  <div class="info-page-section">
+    <div class="info-page-section-title">🎓 继续教育信息</div>
+    <div class="info-page-item">继续教育类型：学历（学位）继续教育</div>
+    <div class="info-page-item">教育阶段：硕士研究生</div>
+    <div class="info-page-item">入学时间：2024年9月</div>
+    <div class="info-page-item">预计毕业时间：2027年6月</div>
+  </div>
+  <div class="info-page-section">
+    <div class="info-page-section-title">🏠 住房贷款利息信息</div>
+    <div class="info-page-item">住房坐落地址：广东省广州市天河区珠江新城花城路66号2栋1801室</div>
+    <div class="info-page-item">权属证明类型：不动产权证书</div>
+    <div class="info-page-item">不动产权证书编号：粤（2022）广州市不动产权第008216号</div>
+    <div class="info-page-item">贷款方式：商业贷款</div>
+    <div class="info-page-item">贷款银行：中国建设银行广州天河支行</div>
+    <div class="info-page-item">贷款合同编号：GZDK-2022-0715-3896</div>
+    <div class="info-page-item">贷款期限：240个月</div>
+    <div class="info-page-item">首次还款日期：2022年8月15日</div>
+    <div class="info-page-item">扣除方式：本人享受100%扣除</div>
+  </div>
+  <div class="info-page-section">
+    <div class="info-page-section-title">👴 赡养老人信息</div>
+    <div class="info-page-item">是否独生子女：是</div>
+    <div class="info-page-item">被赡养人姓名：王建国</div>
+    <div class="info-page-item">被赡养人身份证号：110101195705050067</div>
+    <div class="info-page-item">出生日期：1957年5月5日</div>
+    <div class="info-page-item">与本人关系：父亲</div>
+  </div>
+  </div>
+  <div style="padding:0 16px 24px;">
+    <div style="background:#e6f7ff;border:1px solid #91d5ff;border-radius:8px;padding:12px 16px;margin-bottom:16px;font-size:13px;color:#096dd9;line-height:1.6;">
+      💡 以上是您完成申报所需的参考信息，填报时如需查看，可点击右下角的<span style="font-weight:600;">"个人信息"</span>浮窗随时查阅。
+    </div>
+    <button class="consent-btn" onclick="go('project-select')">开始体验</button>
+  </div>
+</div><div class="page off-right" id="pg-project-select">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('info')">‹</div>
+    <div class="nav-title">申报任务</div>
+    <div></div>
+  </div>
+  <div class="project-select-page">
+    <div class="project-select-title">申报任务</div>
+    <div class="project-select-subtitle">请根据个人信息，选择需要申报的全部项目（可多选）</div>
+    <div style="background:white;border-radius:12px;overflow:hidden;margin:0 0 16px;">
+      <div class="ps-item" data-type="rent" onclick="togglePsItem(this)"><div class="ps-check">✓</div><div class="ps-icon" style="background:#f3e5f5;">🔑</div><div class="ps-text"><h4>住房租金</h4></div></div><div class="ps-item" data-type="housing" onclick="togglePsItem(this)"><div class="ps-check">✓</div><div class="ps-icon" style="background:#e3f2fd;">🏠</div><div class="ps-text"><h4>住房贷款利息</h4></div></div><div class="ps-item" data-type="edu" onclick="togglePsItem(this)"><div class="ps-check">✓</div><div class="ps-icon" style="background:#fff3e0;">🎓</div><div class="ps-text"><h4>继续教育</h4></div></div><div class="ps-item" data-type="children" onclick="togglePsItem(this)"><div class="ps-check">✓</div><div class="ps-icon" style="background:#e0f2f1;">📚</div><div class="ps-text"><h4>子女教育</h4></div></div><div class="ps-item" data-type="elderly" onclick="togglePsItem(this)"><div class="ps-check">✓</div><div class="ps-icon" style="background:#fff8e1;">👴</div><div class="ps-text"><h4>赡养老人</h4></div></div><div class="ps-item" data-type="infant" onclick="togglePsItem(this)"><div class="ps-check">✓</div><div class="ps-icon" style="background:#fce4ec;">👶</div><div class="ps-text"><h4>3岁以下婴幼儿照护</h4></div></div><div class="ps-item" data-type="medical" onclick="togglePsItem(this)"><div class="ps-check">✓</div><div class="ps-icon" style="background:#ffebee;">🏥</div><div class="ps-text"><h4>大病医疗</h4></div></div>
+    </div>
+    <button class="consent-btn" onclick="confirmProjectSelect()">进入模拟任务</button>
+  </div>
+</div><div class="page off-right" id="pg-app-home">
+  <div class="app-home-page">
+    <div class="app-home-search">
+      <div class="app-home-search-box">
+        <span>🔍</span>
+        <input type="text" placeholder="搜索政策、服务、咨询" readonly onclick="showToast('搜索功能仅供演示', 'mini')">
+      </div>
+      <span style="font-size:20px;cursor:pointer;" onclick="showToast('消息中心仅供演示', 'mini')">🔔</span>
+    </div>
+    <div class="app-home-notice">
+      <span>📢</span>
+      <span>2025年度个人所得税综合所得汇算清缴已开启</span>
+    </div>
+    <div class="app-home-section-title">重点服务推荐</div>
+    <div class="app-home-service-card" style="border:none;box-shadow:0 2px 8px rgba(0,0,0,0.06);">
+      <div class="app-home-service-icon" style="background:linear-gradient(135deg,#3072f6,#5b9bd5);color:white;font-size:26px;">🏠</div>
+      <div class="app-home-service-text">
+        <h4>专项附加扣除</h4>
+        <p>超1亿人参与 · 住房租金、继续教育等7项扣除</p>
+      </div>
+    </div>
+    <div style="margin:0 16px 16px;position:relative;">
+      <div id="homeSliderIndicator" style="position:absolute;top:0;left:0;width:calc(50% - 6px);height:40px;border-radius:20px;background:linear-gradient(135deg,rgba(48,114,246,0.10),rgba(91,155,213,0.10));border:2px solid var(--tax-blue);transition:left 0.6s cubic-bezier(0.4,0,0.2,1);pointer-events:none;z-index:0;box-sizing:border-box;"></div>
+      <div style="display:flex;gap:12px;position:relative;z-index:1;">
+        <button class="deduct-service-btn primary" style="flex:1;max-width:none;height:40px;font-size:14px;border-radius:20px;background:var(--tax-blue);color:white;" onclick="go('home')">我要填报</button>
+        <button class="deduct-service-btn secondary" style="flex:1;max-width:none;height:40px;font-size:14px;border-radius:20px;background:white;color:var(--tax-blue);border:1px solid var(--tax-blue);" onclick="showPolicyFloat()">相关政策</button>
+      </div>
+    </div>
+    <div class="app-home-section-title">热门服务</div>
+    <div class="app-home-service-card" onclick="showToast('功能仅供演示', 'mini')">
+      <div class="app-home-service-icon" style="background:#fff3e0;">📊</div>
+      <div class="app-home-service-text">
+        <h4>综合所得年度汇算</h4>
+        <p>年度综合所得汇算清缴申报</p>
+      </div>
+    </div>
+    <div class="app-home-service-card" onclick="showToast('功能仅供演示', 'mini')">
+      <div class="app-home-service-icon" style="background:#e3f2fd;">📄</div>
+      <div class="app-home-service-text">
+        <h4>纳税记录开具</h4>
+        <p>在线开具个人所得税纳税记录</p>
+      </div>
+    </div>
+    <div class="app-home-service-card" onclick="showToast('功能仅供演示', 'mini')" style="margin-bottom:20px;">
+      <div class="app-home-service-icon" style="background:#fce4ec;">💰</div>
+      <div class="app-home-service-text">
+        <h4>收入纳税明细</h4>
+        <p>查询收入及扣缴明细信息</p>
+      </div>
+    </div>
+  </div>
+  <div class="app-home-bottom-nav">
+    <div class="app-home-nav-item active"><span class="app-home-nav-icon">🏠</span><span>首页</span></div>
+    <div class="app-home-nav-item" onclick="showToast('功能仅供演示', 'mini')"><span class="app-home-nav-icon">📋</span><span>服务</span></div>
+    <div class="app-home-nav-item" onclick="showToast('功能仅供演示', 'mini')"><span class="app-home-nav-icon">👤</span><span>个人中心</span></div>
+  </div>
+</div><div class="page off-right" id="pg-home">
+  <div class="home-header">
+    <div class="home-header-back" onclick="go('app-home')">‹</div>
+    <div class="home-header-title">填报项目</div>
+  </div>
+  <div class="deduct-grid">
+
+  <div class="deduct-grid-item" data-type="children" onclick="handleDeductClick('children')">
+    <div class="deduct-grid-icon" style="background:#e8f5e9;">📚</div>
+    <div class="deduct-grid-name">子女教育</div>
+  </div>
+  <div class="deduct-grid-item" data-type="edu" onclick="handleDeductClick('edu')">
+    <div class="deduct-grid-icon" style="background:#fff3e0;">🎓</div>
+    <div class="deduct-grid-name">继续教育</div>
+  </div>
+  <div class="deduct-grid-item" data-type="medical" onclick="handleDeductClick('medical')">
+    <div class="deduct-grid-icon" style="background:#ffebee;">🏥</div>
+    <div class="deduct-grid-name">大病医疗</div>
+  </div>
+  <div class="deduct-grid-item" data-type="housing" onclick="handleDeductClick('housing')">
+    <div class="deduct-grid-icon" style="background:#e3f2fd;">🏠</div>
+    <div class="deduct-grid-name">住房贷款</div>
+  </div>
+  <div class="deduct-grid-item" data-type="rent" onclick="handleDeductClick('rent')">
+    <div class="deduct-grid-icon" style="background:#f3e5f5;">🔑</div>
+    <div class="deduct-grid-name">住房租金</div>
+  </div>
+  <div class="deduct-grid-item" data-type="elderly" onclick="handleDeductClick('elderly')">
+    <div class="deduct-grid-icon" style="background:#fff8e1;">👴</div>
+    <div class="deduct-grid-name">赡养老人</div>
+  </div>
+  <div class="deduct-grid-item" data-type="infant" onclick="handleDeductClick('infant')">
+    <div class="deduct-grid-icon" style="background:#fce4ec;">👶</div>
+    <div class="deduct-grid-name">婴幼儿</div>
+  </div>
+  </div>
+  <div class="record-section">
+    <div class="record-header">
+      <div class="record-header-title">填报记录</div>
+      <div class="record-header-year">2025年度</div>
+    </div>
+    <div class="record-empty" id="recordEmpty">
+      <div class="record-empty-icon">📝</div>
+      <div>暂无填报记录</div>
+    </div>
+  </div>
+</div><div class="page off-right" id="pg-deduct-rent">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('home')">‹</div>
+    <div class="nav-title">住房租金</div>
+    <div></div>
+  </div>
+  <div class="rent-steps">
+    <div class="rent-step active"><span class="rent-step-num">1</span><span class="rent-step-text">基本信息</span></div>
+    <div class="rent-step-line"></div>
+    <div class="rent-step"><span class="rent-step-num">2</span><span class="rent-step-text">租房信息</span></div>
+    <div class="rent-step-line"></div>
+    <div class="rent-step"><span class="rent-step-num">3</span><span class="rent-step-text">申报方式</span></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">本人信息</div>
+    <div class="form-row"><div class="form-label">手机号码<span class="form-required">*</span></div><input class="form-input" id="r-phone" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">电子邮箱</div><input class="form-input" id="r-email" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">联系地址</div><input class="form-input" id="r-address-personal" placeholder="请输入"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">配偶信息</div>
+    <div class="form-row"><div class="form-label">配偶情况</div>
+      <select class="form-select" id="r-spouse" onchange="toggleSpouseDetail('r', this.value)">
+        <option value="">请选择</option>
+        <option value="无配偶">无配偶</option>
+        <option value="有配偶">有配偶</option>
+      </select>
+    </div>
+    <div id="r-spouse-detail" style="display:none;">
+      <div class="form-row"><div class="form-label">他（她）是我的</div>
+        <select class="form-select" id="r-spouse-relation"><option value="">请选择</option><option value="配偶">配偶</option></select>
+      </div>
+      <div class="form-row"><div class="form-label">证件类型</div><select class="form-select" id="r-spouse-idtype"><option value="居民身份证" selected>居民身份证</option></select></div>
+      <div class="form-row"><div class="form-label">证件号码</div><input class="form-input" id="r-spouse-id" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">姓名</div><input class="form-input" id="r-spouse-name" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">国籍（地区）</div><input class="form-input" id="r-spouse-nationality" value="中华人民共和国"></div>
+      <div class="form-row"><div class="form-label">出生日期</div><input class="form-input" id="r-spouse-birth" readonly><span class="form-optional" style="margin-left:8px;">根据证件号自动填入</span></div>
+      <div class="form-row"><div class="form-label">婚姻开始时间</div><input class="form-input" id="r-spouse-marriage-start" placeholder="如：2010年5月"></div>
+    </div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">住房租金支出信息</div>
+    <div class="form-row"><div class="form-label">扣除年度</div><select class="form-select" id="r-year"><option value="2025" selected>2025</option></select></div>
+    <div class="form-row"><div class="form-label">租赁房屋坐落地址<span class="form-required">*</span></div><input class="form-input" id="r-address" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">租赁时间起<span class="form-required">*</span></div><input class="form-input" id="r-start" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">租赁时间止<span class="form-required">*</span></div><input class="form-input" id="r-end" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">租赁合同编号<span class="form-optional">（选填）</span></div><input class="form-input" id="r-contract" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">出租方类型<span class="form-required">*</span></div>
+      <select class="form-select" id="r-ll-type"><option value="">请选择</option><option value="自然人">自然人</option><option value="组织">组织</option></select>
+    </div>
+    <div class="form-row"><div class="form-label">出租人姓名<span class="form-optional">（选填）</span></div><input class="form-input" id="r-ll-name" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">出租人身份证件类型<span class="form-optional">（选填）</span></div>
+      <select class="form-select" id="r-ll-idtype"><option value="">请选择</option><option value="居民身份证" selected>居民身份证</option><option value="护照">护照</option></select>
+    </div>
+    <div class="form-row"><div class="form-label">出租人身份证件号码<span class="form-optional">（选填）</span></div><input class="form-input" id="r-ll-id" placeholder="请输入"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">工作城市信息</div>
+    <div class="form-row"><div class="form-label">主要工作城市（省/市）<span class="form-required">*</span></div><input class="form-input" id="r-city" placeholder="请输入"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">证明材料</div>
+    <div class="form-row"><div class="form-label">证明材料<span class="form-optional">（选填）</span></div>
+      <div class="form-upload" data-upload-id="r-proof" onclick="simulateUpload(this)"><span class="form-upload-add">+</span><span>点击上传证明材料</span></div>
+    </div>
+    <div style="font-size:12px;color:#999;padding:0 16px 8px;">租赁合同，双方身份证等</div>
+  </div>
+  <button class="bottom-btn" onclick="saveDeduct('rent')">保存</button>
+</div>
+
+<div class="page off-right" id="pg-deduct-children">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('home')">‹</div>
+    <div class="nav-title">子女教育</div>
+    <div></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">本人信息</div>
+    <div class="form-row"><div class="form-label">手机号码<span class="form-required">*</span></div><input class="form-input" id="c-phone" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">电子邮箱</div><input class="form-input" id="c-email" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">联系地址</div><input class="form-input" id="c-address-personal" placeholder="请输入"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">配偶信息</div>
+    <div class="form-row"><div class="form-label">配偶情况</div>
+      <select class="form-select" id="c-spouse" onchange="toggleSpouseDetail('c', this.value)">
+        <option value="">请选择</option>
+        <option value="无配偶">无配偶</option>
+        <option value="有配偶">有配偶</option>
+      </select>
+    </div>
+    <div id="c-spouse-detail" style="display:none;">
+      <div class="form-row"><div class="form-label">他（她）是我的</div>
+        <select class="form-select" id="c-spouse-relation">
+          <option value="">请选择</option>
+          <option value="配偶">配偶</option>
+        </select>
+      </div>
+      <div class="form-row"><div class="form-label">证件类型</div>
+        <select class="form-select" id="c-spouse-idtype">
+          <option value="居民身份证" selected>居民身份证</option>
+        </select>
+      </div>
+      <div class="form-row"><div class="form-label">证件号码</div><input class="form-input" id="c-spouse-id" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">姓名</div><input class="form-input" id="c-spouse-name" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">国籍（地区）</div><input class="form-input" id="c-spouse-nationality" value="中华人民共和国"></div>
+      <div class="form-row"><div class="form-label">出生日期</div><input class="form-input" id="c-spouse-birth" readonly><span class="form-optional" style="margin-left:8px;">根据证件号自动填入</span></div>
+      <div class="form-row"><div class="form-label">婚姻开始时间</div><input class="form-input" id="c-spouse-marriage-start" placeholder="如：2010年5月"></div>
+    </div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">子女信息</div>
+    <div class="form-row"><div class="form-label">他/她是我的</div>
+      <select class="form-select" id="c-gender">
+        <option value="">请选择</option>
+        <option value="子">子</option>
+        <option value="女">女</option>
+      </select>
+    </div>
+    <div class="form-row"><div class="form-label">证件类型</div>
+      <select class="form-select" id="c-idtype">
+        <option value="">请选择</option>
+        <option value="居民身份证" selected>居民身份证</option>
+        <option value="护照">护照</option>
+        <option value="港澳居民来往内地通行证">港澳居民来往内地通行证</option>
+        <option value="台湾居民来往大陆通行证">台湾居民来往大陆通行证</option>
+        <option value="外国人永久居留身份证">外国人永久居留身份证</option>
+        <option value="港澳居民居住证">港澳居民居住证</option>
+        <option value="台湾居民居住证">台湾居民居住证</option>
+        <option value="外国人工作许可证（A类）">外国人工作许可证（A类）</option>
+        <option value="外国人工作许可证（B类）">外国人工作许可证（B类）</option>
+        <option value="外国人工作许可证（C类）">外国人工作许可证（C类）</option>
+        <option value="中国护照">中国护照</option>
+        <option value="军官证">军官证</option>
+        <option value="士兵证">士兵证</option>
+        <option value="武警警官证">武警警官证</option>
+        <option value="外国护照">外国护照</option>
+      </select>
+    </div>
+    <div class="form-row"><div class="form-label">证件号<span class="form-required">*</span></div><input class="form-input" id="c-id" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">姓名<span class="form-required">*</span></div><input class="form-input" id="c-name" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">国籍（地区）</div><input class="form-input" id="c-nationality" value="中华人民共和国"></div>
+    <div class="form-row"><div class="form-label">出生日期</div><input class="form-input" id="c-birth" readonly><span class="form-optional" style="margin-left:8px;">根据证件号自动填入</span></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">子女教育信息</div>
+    <div class="form-row"><div class="form-label">当前受教育阶段<span class="form-required">*</span></div>
+      <select class="form-select" id="c-stage">
+        <option value="">请选择</option>
+        <option value="学前教育阶段">学前教育阶段</option>
+        <option value="义务教育">义务教育</option>
+        <option value="高中阶段教育">高中阶段教育</option>
+        <option value="大学专科">大学专科</option>
+        <option value="大学本科">大学本科</option>
+        <option value="硕士研究生">硕士研究生</option>
+        <option value="博士研究生">博士研究生</option>
+      </select>
+    </div>
+    <div class="form-row"><div class="form-label">当前受教育阶段开始时间<span class="form-required">*</span></div><input class="form-input" id="c-start" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">当前受教育阶段结束时间<span class="form-required">*</span></div><input class="form-input" id="c-end" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">子女教育终止时间<span class="form-optional">（选填）</span></div><input class="form-input" id="c-end-time" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">就读国家（地区）<span class="form-required">*</span></div><input class="form-input" id="c-country" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">就读学校<span class="form-required">*</span></div><input class="form-input" id="c-school" placeholder="请输入"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">设置扣除比例</div>
+    <div class="form-row"><div class="form-label">本人扣除比例<span class="form-required">*</span></div>
+      <select class="form-select" id="c-ratio">
+        <option value="">请选择</option>
+        <option value="50%">50%（平均扣除）</option>
+        <option value="100%">100%（全额扣除）</option>
+      </select>
+    </div>
+  </div>
+  <button class="bottom-btn" onclick="saveDeduct('children')">保存</button>
+</div>
+
+<div class="page off-right" id="pg-deduct-edu">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('home')">‹</div>
+    <div class="nav-title">继续教育</div>
+    <div></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">本人信息</div>
+    <div class="form-row"><div class="form-label">手机号码<span class="form-required">*</span></div><input class="form-input" id="e-phone" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">电子邮箱</div><input class="form-input" id="e-email" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">联系地址</div><input class="form-input" id="e-address" placeholder="请输入"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">继续教育类型</div>
+    <div class="form-row"><div class="form-label">继续教育类型<span class="form-required">*</span></div>
+      <select class="form-select" id="e-type">
+        <option value="">请选择</option>
+        <option value="职业资格继续教育">职业资格继续教育</option>
+        <option value="学历（学位）继续教育">学历（学位）继续教育</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">继续教育信息</div>
+    <div class="form-row"><div class="form-label">学历（学位）继续教育阶段<span class="form-required">*</span></div>
+      <select class="form-select" id="e-level">
+        <option value="">请选择</option>
+        <option value="博士研究生">博士研究生</option>
+        <option value="硕士研究生">硕士研究生</option>
+        <option value="大学本科">大学本科</option>
+        <option value="大学专科">大学专科</option>
+        <option value="其他">其他</option>
+      </select>
+    </div>
+    <div class="form-row"><div class="form-label">当前继续教育开始时间<span class="form-required">*</span></div><input class="form-input" id="e-enroll" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">当前继续教育结束时间<span class="form-required">*</span></div><input class="form-input" id="e-grad" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">证明材料<span class="form-optional">（选填）</span></div>
+      <div class="form-upload" data-upload-id="e-proof" onclick="simulateUpload(this)">
+        <span class="form-upload-add">+</span>
+        <span>点击上传证明材料</span>
+      </div>
+    </div>
+  </div>
+  <button class="bottom-btn" onclick="saveDeduct('edu')">保存</button>
+</div>
+
+<div class="page off-right" id="pg-deduct-housing">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('home')">‹</div>
+    <div class="nav-title">住房贷款利息</div>
+    <div></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">本人信息</div>
+    <div class="form-row"><div class="form-label">手机号码<span class="form-required">*</span></div><input class="form-input" id="h-phone" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">电子邮箱</div><input class="form-input" id="h-email" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">联系地址</div><input class="form-input" id="h-address-personal" placeholder="请输入"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">配偶信息</div>
+    <div class="form-row"><div class="form-label">配偶情况</div>
+      <select class="form-select" id="h-spouse" onchange="toggleSpouseDetail('h', this.value)">
+        <option value="">请选择</option>
+        <option value="无配偶">无配偶</option>
+        <option value="有配偶">有配偶</option>
+      </select>
+    </div>
+    <div id="h-spouse-detail" style="display:none;">
+      <div class="form-row"><div class="form-label">他（她）是我的</div>
+        <select class="form-select" id="h-spouse-relation">
+          <option value="">请选择</option>
+          <option value="配偶">配偶</option>
+        </select>
+      </div>
+      <div class="form-row"><div class="form-label">证件类型</div>
+        <select class="form-select" id="h-spouse-idtype">
+          <option value="居民身份证" selected>居民身份证</option>
+        </select>
+      </div>
+      <div class="form-row"><div class="form-label">证件号码</div><input class="form-input" id="h-spouse-id" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">姓名</div><input class="form-input" id="h-spouse-name" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">国籍（地区）</div><input class="form-input" id="h-spouse-nationality" value="中华人民共和国"></div>
+      <div class="form-row"><div class="form-label">出生日期</div><input class="form-input" id="h-spouse-birth" readonly><span class="form-optional" style="margin-left:8px;">根据证件号自动填入</span></div>
+      <div class="form-row"><div class="form-label">婚姻开始时间</div><input class="form-input" id="h-spouse-marriage-start" placeholder="如：2010年5月"></div>
+    </div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">房贷信息</div>
+    <div class="form-row"><div class="form-label">产权证明</div>
+      <select class="form-select" id="h-cert-type">
+        <option value="">请选择</option>
+        <option value="房屋所有权证">房屋所有权证</option>
+        <option value="不动产权证">不动产权证</option>
+        <option value="房屋买卖合同">房屋买卖合同</option>
+        <option value="房屋预售合同">房屋预售合同</option>
+      </select>
+    </div>
+    <div class="form-row"><div class="form-label">证书号码<span class="form-required">*</span></div><input class="form-input" id="h-cert-no" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">房屋坐落地址<span class="form-required">*</span></div><input class="form-input" id="h-address" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">贷款方式</div>
+      <select class="form-select" id="h-loan-type">
+        <option value="">请选择</option>
+        <option value="商业贷款">商业贷款</option>
+        <option value="公积金贷款">公积金贷款</option>
+        <option value="组合贷款">组合贷款</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">商业贷款</div>
+    <div class="form-row"><div class="form-label">贷款银行<span class="form-required">*</span></div><input class="form-input" id="h-bank" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">贷款合同编号<span class="form-required">*</span></div><input class="form-input" id="h-contract" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">首次还款日期<span class="form-required">*</span></div><input class="form-input" id="h-first-date" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">贷款期限（月数）<span class="form-required">*</span></div><input class="form-input" id="h-months" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">证明材料<span class="form-required">*</span></div>
+      <div class="form-upload" data-upload-id="h-proof" onclick="simulateUpload(this)">
+        <span class="form-upload-add">+</span>
+        <span>点击上传证明材料</span>
+      </div>
+    </div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">扣除比例</div>
+    <div class="form-row"><div class="form-label">本人扣除比例<span class="form-required">*</span></div>
+      <select class="form-select" id="h-ratio">
+        <option value="">请选择</option>
+        <option value="50%">50%</option>
+        <option value="100%">100%</option>
+      </select>
+    </div>
+  </div>
+  <button class="bottom-btn" onclick="saveDeduct('housing')">保存</button>
+</div>
+
+<div class="page off-right" id="pg-deduct-elderly">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('home')">‹</div>
+    <div class="nav-title">赡养老人</div>
+    <div></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">本人信息</div>
+    <div class="form-row"><div class="form-label">手机号码<span class="form-required">*</span></div><input class="form-input" id="el-phone" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">电子邮箱</div><input class="form-input" id="el-email" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">联系地址</div><input class="form-input" id="el-address" placeholder="请输入"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">被赡养老人信息</div>
+    <div class="form-row"><div class="form-label">他/她是我的</div>
+      <select class="form-select" id="el-relation">
+        <option value="">请选择</option>
+        <option value="父亲">父亲</option>
+        <option value="母亲">母亲</option>
+      </select>
+    </div>
+    <div class="form-row"><div class="form-label">证件类型</div>
+      <select class="form-select" id="el-idtype">
+        <option value="">请选择</option>
+        <option value="居民身份证" selected>居民身份证</option>
+        <option value="护照">护照</option>
+        <option value="港澳居民来往内地通行证">港澳居民来往内地通行证</option>
+        <option value="台湾居民来往大陆通行证">台湾居民来往大陆通行证</option>
+        <option value="外国人永久居留身份证">外国人永久居留身份证</option>
+        <option value="港澳居民居住证">港澳居民居住证</option>
+        <option value="台湾居民居住证">台湾居民居住证</option>
+        <option value="外国人工作许可证（A类）">外国人工作许可证（A类）</option>
+        <option value="外国人工作许可证（B类）">外国人工作许可证（B类）</option>
+        <option value="外国人工作许可证（C类）">外国人工作许可证（C类）</option>
+        <option value="中国护照">中国护照</option>
+        <option value="军官证">军官证</option>
+        <option value="士兵证">士兵证</option>
+        <option value="武警警官证">武警警官证</option>
+        <option value="外国护照">外国护照</option>
+      </select>
+    </div>
+    <div class="form-row"><div class="form-label">证件号<span class="form-required">*</span></div><input class="form-input" id="el-id" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">姓名<span class="form-required">*</span></div><input class="form-input" id="el-name" placeholder="请输入"></div>
+    <div class="form-row"><div class="form-label">国籍（地区）</div><input class="form-input" id="el-nationality" value="中华人民共和国"></div>
+    <div class="form-row"><div class="form-label">出生日期</div><input class="form-input" id="el-birth" readonly><span class="form-optional" style="margin-left:8px;">根据证件号自动填入</span></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">是否独生子女</div>
+    <div class="form-row"><div class="form-label">是否独生子女</div>
+      <select class="form-select" id="el-only" onchange="toggleElderlyMode()">
+        <option value="">请选择</option>
+        <option value="独生子女">独生子女</option>
+        <option value="非独生子女">非独生子女</option>
+      </select>
+    </div>
+  </div>
+
+  <div id="el-section-non-single" style="display:none;">
+    <div class="form-section">
+      <div class="form-section-header">共同赡养人</div>
+      <div class="form-row"><div class="form-label" style="color:var(--tax-blue);font-weight:500;">+添加共同赡养人信息</div></div>
+      <div class="form-row"><div class="form-label">分摊方式<span class="form-required">*</span></div>
+        <select class="form-select" id="el-share">
+          <option value="">请选择</option>
+          <option value="赡养人平均分摊">赡养人平均分摊</option>
+          <option value="赡养人约定分摊">赡养人约定分摊</option>
+          <option value="被赡养人指定分摊">被赡养人指定分摊</option>
+        </select>
+      </div>
+      <div class="form-row"><div class="form-label">本年度月扣除金额（元）<span class="form-required">*</span></div><input class="form-input" id="el-amount" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">证明材料<span class="form-optional">（选填）</span></div>
+        <div class="form-upload" data-upload-id="el-proof" onclick="simulateUpload(this)">
+          <span class="form-upload-add">+</span>
+          <span>点击上传证明材料</span>
+        </div>
+      </div>
+    </div>
+    <div class="form-section">
+      <div class="form-section-header">共同赡养人信息</div>
+      <div class="form-row"><div class="form-label">共同赡养人姓名<span class="form-required">*</span></div><input class="form-input" id="el-co-name" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">证件类型</div>
+        <select class="form-select" id="el-co-idtype">
+          <option value="">请选择</option>
+          <option value="居民身份证" selected>居民身份证</option>
+          <option value="护照">护照</option>
+          <option value="港澳居民来往内地通行证">港澳居民来往内地通行证</option>
+          <option value="台湾居民来往大陆通行证">台湾居民来往大陆通行证</option>
+          <option value="外国人永久居留身份证">外国人永久居留身份证</option>
+          <option value="港澳居民居住证">港澳居民居住证</option>
+          <option value="台湾居民居住证">台湾居民居住证</option>
+          <option value="外国人工作许可证（A类）">外国人工作许可证（A类）</option>
+          <option value="外国人工作许可证（B类）">外国人工作许可证（B类）</option>
+          <option value="外国人工作许可证（C类）">外国人工作许可证（C类）</option>
+          <option value="中国护照">中国护照</option>
+          <option value="军官证">军官证</option>
+          <option value="士兵证">士兵证</option>
+          <option value="武警警官证">武警警官证</option>
+          <option value="外国护照">外国护照</option>
+        </select>
+      </div>
+      <div class="form-row"><div class="form-label">证件号码<span class="form-required">*</span></div><input class="form-input" id="el-co-id" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">与本人关系</div><input class="form-input" id="el-co-relation" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">月分摊金额（元）</div><input class="form-input" id="el-co-amount" placeholder="请输入"></div>
+    </div>
+  </div>
+
+  <div id="el-section-single" style="display:none;">
+    <div class="form-section">
+      <div class="form-section-header">扣除分配</div>
+      <div class="form-row"><div class="form-label">分配比例</div><div id="el-single-ratio" style="flex:1;text-align:right;color:var(--tax-blue);font-weight:500;">全部由我扣除</div></div>
+      <div class="form-row"><div class="form-label">证明材料<span class="form-optional">（选填）</span></div>
+        <div class="form-upload" data-upload-id="el-proof-single" onclick="simulateUpload(this)">
+          <span class="form-upload-add">+</span>
+          <span>点击上传证明材料</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="bottom-btn" onclick="saveDeduct('elderly')">保存</button>
+</div>
+
+<div class="page off-right" id="pg-deduct-infant">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('home')">‹</div>
+    <div class="nav-title">3岁以下婴幼儿照护</div>
+    <div></div>
+  </div>
+  <div class="rent-steps">
+    <div class="rent-step active"><span class="rent-step-num">1</span><span class="rent-step-text">基本信息</span></div>
+    <div class="rent-step-line"></div>
+    <div class="rent-step"><span class="rent-step-num">2</span><span class="rent-step-text">子女信息</span></div>
+    <div class="rent-step-line"></div>
+    <div class="rent-step"><span class="rent-step-num">3</span><span class="rent-step-text">设置扣除比例</span></div>
+    <div class="rent-step-line"></div>
+    <div class="rent-step"><span class="rent-step-num">4</span><span class="rent-step-text">申报方式</span></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">扣除年度</div>
+    <div class="form-row"><div class="form-label">选择扣除年度</div>
+      <select class="form-select" id="i-year">
+        <option value="2025" selected>2025</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">子女信息</div>
+    <div class="form-row" style="cursor:pointer;" onclick="goInfantChildSelect()">
+      <div class="form-label">选择子女<span class="form-required">*</span></div>
+      <div id="i-child-display" style="padding:8px 0;color:#999;">请选择</div>
+    </div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">证明材料</div>
+    <div class="form-row"><div class="form-label">证明材料<span class="form-optional">（选填）</span></div>
+      <div class="form-upload" data-upload-id="i-proof" onclick="simulateUpload(this)">
+        <span class="form-upload-add">+</span>
+        <span>点击上传证明材料</span>
+      </div>
+    </div>
+  </div>
+  <button class="bottom-btn" onclick="saveDeduct('infant')">下一步</button>
+</div>
+
+<div class="page off-right" id="pg-infant-child-select">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('deduct-infant')">‹</div>
+    <div class="nav-title">选择子女</div>
+    <div style="color:#1677ff;font-size:14px;cursor:pointer;" onclick="showInfantChildAdd()">管理</div>
+  </div>
+  <div id="infant-child-list"></div>
+  <div id="infant-child-empty" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:80px 20px 40px;">
+    <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect x="30" y="20" width="60" height="75" rx="6" fill="#E8F0FE" stroke="#4A90E2" stroke-width="1.5"/>
+      <circle cx="60" cy="42" r="12" fill="#B8D4F0"/>
+      <rect x="40" y="60" width="40" height="4" rx="2" fill="#B8D4F0"/>
+      <rect x="44" y="68" width="32" height="3" rx="1.5" fill="#D4E4F7"/>
+      <rect x="44" y="75" width="28" height="3" rx="1.5" fill="#D4E4F7"/>
+      <circle cx="60" cy="108" r="8" fill="#E8F0FE"/>
+      <line x1="60" y1="95" x2="60" y2="100" stroke="#4A90E2" stroke-width="1.5"/>
+    </svg>
+    <div style="color:#999;font-size:14px;margin-top:16px;">暂无子女信息</div>
+  </div>
+  <div id="infant-child-add-section" style="display:none;padding:16px;">
+    <div style="font-size:15px;font-weight:600;margin-bottom:12px;">添加子女信息</div>
+    <div class="form-section">
+      <div class="form-row"><div class="form-label">姓名<span class="form-required">*</span></div><input class="form-input" id="ic-name" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">身份证件类型</div>
+        <select class="form-select" id="ic-idtype"><option value="居民身份证" selected>居民身份证</option></select>
+      </div>
+      <div class="form-row"><div class="form-label">身份证件号码<span class="form-required">*</span></div><input class="form-input" id="ic-id" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">出生日期<span class="form-required">*</span></div><input class="form-input" id="ic-birth" placeholder="请输入"></div>
+      <div class="form-row"><div class="form-label">国籍（地区）</div><input class="form-input" id="ic-nationality" value="中华人民共和国"></div>
+    </div>
+    <div style="display:flex;gap:12px;margin-top:16px;">
+      <button class="bottom-btn" style="flex:1;background:#999;" onclick="cancelInfantChildAdd()">取消</button>
+      <button class="bottom-btn" style="flex:1;" onclick="saveInfantChild()">保存</button>
+    </div>
+  </div>
+  <div id="infant-child-add-btn-wrap" style="padding:16px;display:none;">
+    <button class="bottom-btn" onclick="showInfantChildAdd()">添加子女信息</button>
+  </div>
+</div>
+
+<div class="page off-right" id="pg-deduct-medical">
+  <div class="nav-bar">
+    <div class="nav-back" onclick="go('home')">‹</div>
+    <div class="nav-title">大病医疗</div>
+    <div></div>
+  </div>
+  <div class="rent-steps">
+    <div class="rent-step active"><span class="rent-step-num">1</span><span class="rent-step-text">基本信息</span></div>
+    <div class="rent-step-line"></div>
+    <div class="rent-step"><span class="rent-step-num">2</span><span class="rent-step-text">医疗信息</span></div>
+    <div class="rent-step-line"></div>
+    <div class="rent-step"><span class="rent-step-num">3</span><span class="rent-step-text">申报方式</span></div>
+  </div>
+  <div style="background:#fff7e6;color:#d48806;font-size:13px;padding:12px 16px;line-height:1.6;">
+    大病医疗专项附加扣除仅可在综合所得年度汇算申报时享受，建议您在年度终了后汇总填报。<a href="#" style="color:#1890ff;">政策说明</a><br>
+    医疗信息相关数据可登录国家医保服务平台查询。
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">扣除年度</div>
+    <div class="form-row"><div class="form-label">选择扣除年度</div>
+      <select class="form-select" id="m-year">
+        <option value="2025" selected>2025</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">医疗信息</div>
+    <div class="form-row"><div class="form-label">选择关系</div>
+      <select class="form-select" id="m-relation">
+        <option value="本人" selected>本人</option>
+        <option value="配偶">配偶</option>
+        <option value="子女">子女</option>
+        <option value="父母">父母</option>
+      </select>
+    </div>
+    <div class="form-row"><div class="form-label">医药费用总金额(元)</div><input class="form-input" id="m-total" placeholder="请输入金额"></div>
+    <div class="form-row"><div class="form-label">个人负担金额(元)<span style="color:#999;font-size:12px;margin-left:4px;">请参考国家医保服务平台APP</span></div><input class="form-input" id="m-self" placeholder="请输入金额"></div>
+  </div>
+  <div class="form-section">
+    <div class="form-section-header">证明材料</div>
+    <div class="form-row"><div class="form-label">证明材料<span class="form-optional">（选填）</span></div>
+      <div class="form-upload" data-upload-id="m-proof" onclick="simulateUpload(this)">
+        <span class="form-upload-add">+</span>
+        <span>点击上传证明材料</span>
+      </div>
+    </div>
+  </div>
+  <button class="bottom-btn" onclick="saveDeduct('medical')">下一步</button>
+</div><div class="page off-right" id="pg-done">
+  <div class="done-page">
+    <div id="submit-progress">
+      <div class="submit-spinner"></div>
+      <div class="submit-status" id="submitStatus">正在校验填报信息...</div>
+      <div class="submit-steps">
+        <div class="submit-step active" id="step1">✓ 信息校验</div>
+        <div class="submit-step" id="step2">提交税务系统</div>
+        <div class="submit-step" id="step3">提交成功</div>
+      </div>
+    </div>
+    <div id="submit-success" style="display:none;">
+      <div class="done-icon">✅</div>
+      <div class="done-title">提交成功</div>
+      <div class="done-desc">您已代 王明 完成 2025 年度专项附加扣除信息填报，信息已成功提交至税务系统。</div>
+      <div class="done-summary">
+        <div class="done-row"><div class="done-label">纳税人</div><div class="done-val blue">王明</div></div>
+    <div class="done-row"><div class="done-label">子女教育</div><div class="done-val blue">已填报</div></div>
+    <div class="done-row"><div class="done-label">继续教育</div><div class="done-val blue">已填报</div></div>
+    <div class="done-row"><div class="done-label">住房贷款利息</div><div class="done-val blue">已填报</div></div>
+    <div class="done-row"><div class="done-label">赡养老人</div><div class="done-val blue">已填报</div></div>
+      </div>
+      <button class="consent-btn" style="margin-bottom:12px;" onclick="finishAndExit()">完成并提交</button>
+      <button class="consent-btn" style="margin-bottom:12px;background:#f0ad4e;" onclick="copyTrackData()">复制实验数据</button>
+      <button class="consent-btn" style="background:#999;" onclick="try{window.close()}catch(e){showToast('请手动关闭页面','mini')}">退出</button>
+    </div>
+    <div id="track-data-display" style="display:none;margin-top:16px;padding:12px;background:#fff;border-radius:8px;font-size:12px;color:#333;word-break:break-all;text-align:left;max-height:200px;overflow-y:auto;"></div>
+  </div>
+</div><div class="prep-overlay" id="prepOverlay" onclick="closePrepModal()"></div>
+<div class="prep-modal" id="prepModal">
+  <div class="prep-modal-header">
+    <div class="prep-modal-close" onclick="closePrepModal()">✕</div>
+    <div class="prep-modal-header-icon" id="prepIcon">📋</div>
+  </div>
+  <div class="prep-modal-body">
+    <div class="prep-modal-title">准备材料</div>
+    <div id="prepContent"></div>
+    <button class="prep-btn" id="prepBtn">准备完毕，进入填报</button>
+  </div>
+</div><div class="tip-modal-overlay" id="tipModalOverlay" onclick="closeTipModal()"></div>
+<div class="tip-modal" id="tipModal">
+  <div id="tipModalLoading">
+    <div class="tip-spinner"></div>
+    <div class="tip-loading-text" id="tipLoadingText">正在为您带入信息...</div>
+  </div>
+  <div id="tipModalContent" style="display:none;">
+    <div class="tip-modal-icon">💡</div>
+    <div class="tip-modal-title">填报提示</div>
+    <div class="tip-modal-text" id="tipModalText"></div>
+    <button class="tip-modal-btn" onclick="closeTipModal()">知道了</button>
+  </div>
+</div>
+<div class="tip-modal-overlay" id="completeModalOverlay"></div>
+<div class="tip-modal" id="completeModal">
+  <div class="tip-modal-icon">✅</div>
+  <div class="tip-modal-title">实验完成</div>
+  <div class="tip-modal-text">您已完成所有专项附加扣除项目的填报，感谢您的参与！</div>
+  <button class="tip-modal-btn" onclick="exitExperiment()">完成实验，开始作答</button>
+</div>
+<div class="tip-modal-overlay" id="declareModalOverlay"></div>
+<div class="tip-modal" id="declareModal">
+  <div class="tip-modal-icon">📋</div>
+  <div class="tip-modal-title">选择申报方式</div>
+  <div style="padding:12px 20px;">
+    <label class="declare-option" id="declareOpt1" onclick="selectDeclare(1)">
+      <span class="declare-radio"></span>
+      <div class="declare-content">
+        <div class="declare-title">通过扣缴义务人申报</div>
+        <div class="declare-desc">您指定的扣缴义务人在为您办理工资薪金等个人所得税预扣预缴申报时进行税前扣除</div>
+      </div>
+    </label>
+    <label class="declare-option" id="declareOpt2" onclick="selectDeclare(2)">
+      <span class="declare-radio"></span>
+      <div class="declare-content">
+        <div class="declare-title">年度自行申报</div>
+        <div class="declare-desc">您本次提交的专项附加扣除信息可在个人所得税年度汇算清缴申报中进行税前扣除</div>
+      </div>
+    </label>
+  </div>
+  <button class="tip-modal-btn" onclick="confirmDeclare()">确认</button>
+</div><div class="float-overlay" id="floatOverlay" onclick="closeFloatPanel()"></div>
+<div class="float-panel" id="floatPanel">
+  <div class="float-panel-header">
+    <div class="float-panel-title">📋 个人信息材料</div>
+    <div class="float-panel-close" onclick="closeFloatPanel()">✕</div>
+  </div>
+  <div class="float-panel-body">
+    <div class="float-section">
+  <div class="float-section-title">📄 个人基本信息</div>
+  <div class="float-item"><div class="float-item-text">姓名：王明</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '王明')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">身份证号：110101198306120039</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '110101198306120039')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">手机号：13900005678</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '13900005678')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">任职单位：广州华南智造科技有限公司</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '广州华南智造科技有限公司')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">主要工作城市：广东省广州市</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '广东省广州市')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">婚姻状况：已婚</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '已婚')">复制</span></div>
+</div>
+<div class="float-section">
+  <div class="float-section-title">💑 配偶信息</div>
+  <div class="float-item"><div class="float-item-text">配偶姓名：刘婷</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '刘婷')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">配偶身份证号：110101198506240045</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '110101198506240045')">复制</span></div>
+</div>
+<div class="float-section">
+  <div class="float-section-title">📚 子女教育信息</div>
+  <div class="float-item"><div class="float-item-text">子女姓名：王一诺</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '王一诺')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">子女身份证号：110101201604180052</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '110101201604180052')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">受教育阶段：义务教育阶段—小学</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '义务教育阶段—小学')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">起止时间：2022年9月 至 2028年8月</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '2022年9月 至 2028年8月')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">就读学校：广州市天河区第一小学</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '广州市天河区第一小学')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">扣除比例：本人50%，配偶50%</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '本人50%，配偶50%')">复制</span></div>
+</div>
+<div class="float-section">
+  <div class="float-section-title">🎓 继续教育信息</div>
+  <div class="float-item"><div class="float-item-text">继续教育类型：学历（学位）继续教育</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '学历（学位）继续教育')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">教育阶段：硕士研究生</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '硕士研究生')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">入学时间：2024年9月</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '2024年9月')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">预计毕业：2027年6月</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '2027年6月')">复制</span></div>
+</div>
+<div class="float-section">
+  <div class="float-section-title">🏠 住房贷款利息信息</div>
+  <div class="float-item"><div class="float-item-text">住房地址：广东省广州市天河区珠江新城花城路66号2栋1801室</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '广东省广州市天河区珠江新城花城路66号2栋1801室')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">权属证明类型：不动产权证书</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '不动产权证书')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">不动产权证书编号：粤（2022）广州市不动产权第008216号</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '粤（2022）广州市不动产权第008216号')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">贷款方式：商业贷款</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '商业贷款')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">贷款银行：中国建设银行广州天河支行</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '中国建设银行广州天河支行')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">贷款合同编号：GZDK-2022-0715-3896</div><span class="float-item-copy" onclick="copyItem(this.parentElement, 'GZDK-2022-0715-3896')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">贷款期限：240个月</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '240个月')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">首次还款日期：2022年8月15日</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '2022年8月15日')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">扣除方式：本人享受100%扣除</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '本人享受100%扣除')">复制</span></div>
+</div>
+<div class="float-section">
+  <div class="float-section-title">👴 赡养老人信息</div>
+  <div class="float-item"><div class="float-item-text">是否独生子女：是</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '是')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">被赡养人姓名：王建国</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '王建国')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">被赡养人身份证号：110101195705050067</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '110101195705050067')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">出生日期：1957年5月5日</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '1957年5月5日')">复制</span></div>
+  <div class="float-item"><div class="float-item-text">与本人关系：父亲</div><span class="float-item-copy" onclick="copyItem(this.parentElement, '父亲')">复制</span></div>
+</div>
+    <button class="float-all-copy" onclick="copyAll()">一键复制全部</button>
+  </div>
+</div>
+<button class="fab-btn" id="fabBtn" onclick="toggleFloatPanel()">
+  <span class="fab-icon">📋</span>个人信息
+</button>
+<div class="fab-pulse" id="fabPulse"></div>
+<div class="policy-float-overlay" id="policyFloatOverlay" onclick="closePolicyFloat()"></div>
+<div class="policy-float-panel" id="policyFloatPanel">
+  <div class="policy-float-header" style="position:relative;">
+    <div class="policy-float-close" onclick="closePolicyFloat()">✕</div>
+    <h3>专项附加扣除政策</h3>
+  </div>
+  <div class="policy-float-tabs">
+    
+<button class="policy-float-tab active" onclick="switchPolicyTab('rent')">🔑 住房租金</button>
+<button class="policy-float-tab" onclick="switchPolicyTab('housing')">🏠 住房贷款利息</button>
+<button class="policy-float-tab" onclick="switchPolicyTab('edu')">🎓 继续教育</button>
+<button class="policy-float-tab" onclick="switchPolicyTab('elderly')">👴 赡养老人</button>
+<button class="policy-float-tab" onclick="switchPolicyTab('infant')">👶 3岁以下婴幼儿照护</button>
+<button class="policy-float-tab" onclick="switchPolicyTab('children')">📚 子女教育</button>
+<button class="policy-float-tab" onclick="switchPolicyTab('medical')">🏥 大病医疗</button>
+  </div>
+  <div class="policy-float-body">
+    
+<div id="policy-content-rent" style="display:block;">
+      <h4>🔑 住房租金</h4>
+      <table class="policy-table">
+        <tr><th>扣除范围</th><td>纳税人在主要工作城市没有自有住房而发生的住房租金支出。</td></tr>
+        <tr><th>扣除标准</th><td>直辖市、省会（首府）城市、计划单列市以及国务院确定的其他城市，扣除标准为每月1500元；除第一项所列城市以外，市辖区户籍人口超过100万的城市，扣除标准为每月1100元；市辖区户籍人口不超过100万的城市，扣除标准为每月800元。</td></tr>
+        <tr><th>扣除主体</th><td>纳税人未婚：由本人扣除住房租金支出。夫妻双方主要工作城市相同的，只能由一方扣除住房租金支出；夫妻双方主要工作城市不相同的，且各自在其主要工作城市都没有住房的，可以分别扣除住房租金支出。</td></tr>
+        <tr><th>注意事项</th><td>纳税人及其配偶在一个纳税年度内不能同时分别享受住房贷款利息和住房租金专项附加扣除。</td></tr>
+      </table>
+    </div>
+<div id="policy-content-housing" style="display:none;">
+      <h4>🏠 住房贷款利息</h4>
+      <table class="policy-table">
+        <tr><th>扣除范围</th><td>本人或配偶单独或共同使用商业银行或住房公积金个人住房贷款为本人或其配偶购买中国境内住房，发生的首套住房贷款利息支出。实际发生贷款利息的年度（扣除期限最长不超过240个月）。</td></tr>
+        <tr><th>扣除标准</th><td>1000元/月（定额扣除）</td></tr>
+        <tr><th>扣除主体</th><td>▶纳税人未婚：由本人扣除。▶纳税人已婚：经夫妻双方约定，可以选择由其中一方扣除。▶夫妻双方婚前分别购买住房发生的首套住房贷款利息支出：婚后可以选择其中一套购买的住房，由购买方按扣除标准的100%扣除；也可以由夫妻双方对各自购买的住房分别按扣除标准的50%扣除，具体扣除方式在一个纳税年度内不能变更。</td></tr>
+        <tr><th>注意事项</th><td>▶1.纳税人只能享受一次首套住房贷款的利息扣除。▶2.首套住房贷款是指购买住房享受首套住房贷款利率的住房贷款。▶3.纳税人及其配偶在一个纳税年度内不能同时分别享受住房贷款利息和住房租金专项附加扣除。</td></tr>
+      </table>
+    </div>
+<div id="policy-content-edu" style="display:none;">
+      <h4>🎓 继续教育</h4>
+      <table class="policy-table">
+        <tr><th>扣除范围</th><td>▶学历（学位）继续教育支出。▶职业资格继续教育支出：技能人员职业资格继续教育、专业技术人员职业资格继续教育。</td></tr>
+        <tr><th>扣除标准</th><td>▶学历（学位）继续教育：400元/月（定额扣除），扣除期限不能超过48个月。▶职业资格继续教育：3600元/年（定额扣除），取得相关证书的当年。</td></tr>
+        <tr><th>扣除主体</th><td>▶学历（学位）继续教育：本人扣除。个人接受本科及以下学历（学位）继续教育，符合规定扣除条件的，可以选择由其父母扣除。▶职业资格继续教育：本人扣除。</td></tr>
+        <tr><th>注意事项</th><td>纳税人接受技能人员职业资格继续教育、专业技术人员职业资格继续教育的，应当留存相关证书等资料备查。</td></tr>
+      </table>
+    </div>
+<div id="policy-content-elderly" style="display:none;">
+      <h4>👴 赡养老人</h4>
+      <table class="policy-table">
+        <tr><th>扣除范围</th><td>纳税人赡养一位及以上被赡养人的赡养支出。被赡养人是指年满60岁的父母，以及子女均已去世的年满60岁的祖父母、外祖父母。</td></tr>
+        <tr><th>扣除标准</th><td>独生子女：每月3000元；非独生子女：由其与兄弟姐妹分摊每月3000元的扣除额度，每人分摊的额度不能超过每月1500元。</td></tr>
+        <tr><th>扣除主体</th><td>可以由赡养人均摊或约定分摊，也可以由被赡养人指定分摊。约定或指定分摊的须签订书面分摊协议，指定分摊优先于约定分摊。</td></tr>
+        <tr><th>注意事项</th><td>具体分摊方式和额度在一个纳税年度内不能变更。</td></tr>
+      </table>
+    </div>
+<div id="policy-content-infant" style="display:none;">
+      <h4>👶 3岁以下婴幼儿照护</h4>
+      <table class="policy-table">
+        <tr><th>扣除范围</th><td>纳税人未满三周岁的子女在照护期间产生的相关支出。</td></tr>
+        <tr><th>扣除标准</th><td>2000元/月/每个子女（定额扣除）</td></tr>
+        <tr><th>扣除主体</th><td>▶父母（法定监护人）可以选择一方按扣除标准的100%扣除。▶父母（法定监护人）可以选择由双方分别按扣除标准的50%扣除。</td></tr>
+        <tr><th>注意事项</th><td>具体扣除方式在一个纳税年度内不能变更。</td></tr>
+      </table>
+    </div>
+<div id="policy-content-children" style="display:none;">
+      <h4>📚 子女教育</h4>
+      <table class="policy-table">
+        <tr><th>扣除范围</th><td>纳税人的子女接受全日制学历教育的相关支出。学历教育包括义务教育（小学、初中教育）、高中阶段教育（普通高中、中等职业、技工教育)、高等教育（大学专科、大学本科、硕士研究生、博士研究生）。</td></tr>
+        <tr><th>扣除标准</th><td>2000元/月/每个子女（定额扣除）</td></tr>
+        <tr><th>扣除主体</th><td>父母可以选择由其中一方按扣除标准的100%扣除，也可以选择由双方分别按扣除标准的50%扣除，具体扣除方式在一个纳税年度内不能变更。</td></tr>
+        <tr><th>注意事项</th><td>子女在境外接受教育的，纳税人应当留存境外学校录取通知书、留学签证等相关教育的证明资料备查。</td></tr>
+      </table>
+    </div>
+<div id="policy-content-medical" style="display:none;">
+      <h4>🏥 大病医疗</h4>
+      <table class="policy-table">
+        <tr><th>扣除范围</th><td>在一个纳税年度内，纳税人发生的与基本医保相关的医药费用支出，扣除医保报销后个人负担（指医保目录范围内的自付部分）累计超过15000元的部分。</td></tr>
+        <tr><th>扣除标准</th><td>在80000元限额内据实扣除。</td></tr>
+        <tr><th>扣除主体</th><td>纳税人发生的医药费用支出可以选择由本人或者其配偶扣除；未成年子女发生的医药费用支出可以选择由其父母一方扣除。</td></tr>
+        <tr><th>注意事项</th><td>纳税人应当留存医药服务收费及医保报销相关票据原件（或者复印件）等资料备查。</td></tr>
+      </table>
+    </div>
+  </div>
+</div><div class="success-toast" id="toast">
+  <div class="success-toast-icon">✅</div>
+  <div class="success-toast-text" id="toast-text">保存成功</div>
+</div><script>
+const SERVICE = 'complex';
+const GROUP = 'high';
+let savedDeducts = { children: false, edu: false, housing: false, elderly: false };
+let currentPrepType = '';
+
+/* ============================================================
+   数据追踪模块 - 记录用户行为数据用于实验分析
+   
+   追踪字段说明：
+   - 页面停留：各页面停留时长（秒）
+   - 用户操作：点击次数、复制次数、返回次数等
+   - 填报状态：各扣除项目是否完成保存
+   - 政策查看：政策信息浮窗查看次数和总时长
+   - 错误统计：校验错误次数、不符合项点击次数等
+   - 数据质量：字段不一致记录
+   ============================================================ */
+const TRACK = {
+  pageLoadTime: Date.now(),
+  clickCount: 0,
+  copyCount: 0,
+  openInfoCard: 0,
+  openInfoCardCount: 0,
+  wrongItemClick: 0,
+  saveRent: null,
+  saveEducation: null,
+  saveChildEducation: null,
+  saveMortgage: null,
+  saveElderly: null,
+  errorCount: 0,
+  backCount: 0,
+  completed: 0,
+  mismatchFields: [],
+  policyViewCount: 0,       // 政策信息浮窗打开次数
+  policyViewDuration: 0,    // 政策信息累计查看时长（秒）
+  policyViewStartTime: null,// 本次政策查看开始时间戳（null表示未打开）
+  durationSec: null,
+  pageDuration_consent: 0,
+  pageDuration_info: 0,
+  pageDuration_project_select: 0,
+  pageDuration_app_home: 0,
+  pageDuration_home: 0,
+  pageDuration_deduct_rent: 0,
+  pageDuration_deduct_edu: 0,
+  pageDuration_deduct_children: 0,
+  pageDuration_deduct_housing: 0,
+  pageDuration_deduct_elderly: 0,
+  pageDuration_deduct_infant: 0,
+  pageDuration_infant_child_select: 0,
+  pageDuration_deduct_medical: 0,
+  pageDuration_done: 0
+};
+
+let pageEnterTime = Date.now();
+let currentPageId = 'consent';
+
+
+document.addEventListener('click', function(e) {
+  TRACK.clickCount++;
+  var t = e.target;
+  while (t && t !== document) {
+    if (t.classList && t.classList.contains('float-item-copy')) {
+      TRACK.copyCount++;
+    }
+    if ((t.classList && t.classList.contains('nav-back')) ||
+        (t.textContent && t.textContent.indexOf('重新体验') !== -1)) {
+      TRACK.backCount++;
+    }
+    t = t.parentElement;
+  }
+});
+
+window.addEventListener('message', function(e) {
+  if (e.data && e.data.type === 'getTrackingData') {
+    TRACK.durationSec = TRACK.durationSec || Math.round((Date.now() - TRACK.pageLoadTime) / 1000);
+    e.source.postMessage({ type: 'trackingResult', data: Object.assign({}, TRACK) }, '*');
+  }
+});
+/* 页面卸载时保存政策查看时长 */
+window.addEventListener('beforeunload', function() {
+  if (TRACK.policyViewStartTime) {
+    TRACK.policyViewDuration += Math.round((Date.now() - TRACK.policyViewStartTime) / 1000);
+    TRACK.policyViewStartTime = null;
+  }
+});
+/* ===== 数据追踪结束 ===== */
+
+const PREP_DATA = {
+  children: {
+    icon: '📚',
+    items: [
+      { icon: '🎒', title: '子女教育信息', desc: '包含受教育阶段、受教育时间段等' },
+      { icon: '🆔', title: '子女、配偶身份证件号码', desc: '如果没有配偶，可不填写配偶身份信息' }
+    ],
+    formPage: 'deduct-children',
+    policy: '纳税人有子女接受学前教育（3岁以上）或全日制学历教育的，每个子女每月可扣除2000元。'
+  },
+  edu: {
+    icon: '🎓',
+    items: [
+      { icon: '📖', title: '学历(学位)继续教育信息', desc: '教育阶段、入学时间、毕业时间' }
+    ],
+    formPage: 'deduct-edu',
+    policy: '纳税人接受学历（学位）继续教育或取得职业资格继续教育证书的，可按规定扣除。'
+  },
+  medical: {
+    icon: '🏥',
+    items: [
+      { icon: '👤', title: '患者信息', desc: '本人及配偶、未成年子女发生的大病医药费用支出可限额内据实扣除' },
+      { icon: '💊', title: '医疗信息', desc: '包含个人负担金额、医药费用总金额' }
+    ],
+    formPage: 'deduct-medical',
+    unqualified: '经系统核查，您及家庭成员上年度无大病医疗支出记录，不符合本项扣除条件。',
+    policy: '纳税人本人、配偶或未成年子女在一个纳税年度内发生的大病医疗支出，个人负担累计超过15000元的部分，可在80000元限额内据实扣除。'
+  },
+  housing: {
+    icon: '🏠',
+    items: [
+      { icon: '📋', title: '产权证明', desc: '如产权证、不动产登记证、商品房买卖合同、预售合同' },
+      { icon: '📄', title: '贷款合同', desc: '请按照贷款合同内容据实填写' }
+    ],
+    formPage: 'deduct-housing',
+    policy: '纳税人本人或配偶使用商业银行或住房公积金贷款购买中国境内住房，发生的首套住房贷款利息支出，可按规定扣除。'
+  },
+  rent: {
+    icon: '🔑',
+    items: [
+      { icon: '🏠', title: '住房租赁信息', desc: '获取合同编号、租赁房屋坐落地址、租赁方信息' },
+      { icon: '🏙️', title: '工作城市信息', desc: '主要工作城市（市一级）' }
+    ],
+    formPage: 'deduct-rent',
+    unqualified: '经系统核查，您已享受住房贷款利息扣除，不可同时享受住房租金扣除。',
+    policy: '纳税人在主要工作城市没有自有住房而发生的住房租金支出，可按规定标准定额扣除。'
+  },
+  elderly: {
+    icon: '👴',
+    items: [
+      { icon: '👤', title: '被赡养人信息', desc: '包含身份证件信息、出生日期。被赡养人需要年满60(含)周岁' },
+      { icon: '👥', title: '共同赡养人信息（选填）', desc: '包含身份证件信息、出生日期。如果您是独生子女不需要填写共同赡养人' }
+    ],
+    formPage: 'deduct-elderly',
+    policy: '纳税人赡养60岁（含）以上父母及其他法定赡养人的，可按规定扣除。'
+  },
+  infant: {
+    icon: '👶',
+    items: [
+      { icon: '🍼', title: '子女身份信息', desc: '包含子女姓名、国籍、身份证件类型、身份证件号码、子女出生日期等' }
+    ],
+    formPage: 'deduct-infant',
+    unqualified: '经系统核查，您当前无3岁以下婴幼儿，不符合本项扣除条件。',
+    policy: '纳税人照护3岁以下婴幼儿的，每个婴幼儿每月可扣除2000元。'
+  }
+};
+
+const FORM_TIPS = {
+  'deduct-children': { text: '子女教育信息已根据公安、教育等部门数据自动生成，请核对确认。' },
+  'deduct-edu': { text: '继续教育信息已根据教育部、人力资源和社会保障部等部门数据自动生成，请核对确认。' },
+  'deduct-housing': { text: '住房贷款信息已根据自然资源部（不动产登记）、中国人民银行等部门数据自动生成，请核对确认。' },
+  'deduct-elderly': { text: '赡养老人信息已根据公安等部门数据自动生成，请核对确认。' }
+};
+
+const order = ['consent','info','project-select','app-home','home','deduct-rent','deduct-children','deduct-edu','deduct-housing','deduct-elderly','deduct-infant','infant-child-select','deduct-medical','done'];
+let current = 'consent';
+
+/* ===== 数据提交配置（已通过postMessage回传给Credamo，无需外部提交） ===== */
+
+function go(id) {
+  /* record dwell time of current page */
+  const duration = Math.round((Date.now() - pageEnterTime) / 1000);
+  const key = 'pageDuration_' + currentPageId.replace(/-/g, '_');
+  TRACK[key] = (TRACK[key] || 0) + duration;
+
+  const pages = document.querySelectorAll('.page');
+  const ni = order.indexOf(id);
+  pages.forEach((p, i) => {
+    p.classList.remove('on','off-left','off-right');
+    if (i < ni) p.classList.add('off-left');
+    else if (i > ni) p.classList.add('off-right');
+    else p.classList.add('on');
+  });
+  current = id;
+  currentPageId = id;
+  pageEnterTime = Date.now();
+  if (id === 'done') {
+    setTimeout(function() { startSubmitAnimation(); }, 400);
+    TRACK.durationSec = Math.round((Date.now() - TRACK.pageLoadTime) / 1000);
+    submitToServer();
+    document.getElementById('fabBtn').classList.remove('visible');
+  }
+  if (id === 'info') { document.getElementById('fabBtn').classList.add('visible'); document.getElementById('fabPulse').classList.add('visible'); }
+  if (id === 'home') initHome();
+  if (id === 'deduct-children') autoFill('children');
+  if (id === 'deduct-edu') autoFill('edu');
+  if (id === 'deduct-housing') autoFill('housing');
+  if (id === 'deduct-elderly') autoFill('elderly');
+}
+
+function handleDeductClick(type) {
+  if (savedDeducts[type]) {
+    var data = PREP_DATA[type];
+    if (data.unqualified && GROUP !== 'passive') return;
+    document.getElementById('prepIcon').textContent = data.icon;
+    var html = '<div style="text-align:center;padding:8px 0;">该扣除项目已填报完成</div>';
+    document.getElementById('prepContent').innerHTML = html;
+    document.getElementById('prepBtn').textContent = '修改已填信息';
+    document.getElementById('prepBtn').className = 'prep-btn';
+    document.getElementById('prepBtn').onclick = enterForm;
+    document.getElementById('prepOverlay').classList.add('show');
+    document.getElementById('prepModal').classList.add('show');
+  } else {
+    showPrepModal(type);
+  }
+}
+
+function showPrepModal(type) {
+  currentPrepType = type;
+  const data = PREP_DATA[type];
+  if (data.unqualified) TRACK.wrongItemClick++;
+  document.getElementById('prepIcon').textContent = data.icon;
+  let html = '';
+  
+  if (!data.unqualified) {
+      html += `<div class="prep-unqualified" style="background:#dbe8ff;color:#1a5fd1;font-weight:500;">系统已<strong>跨部门调取数据</strong>为您生成预填信息，请您确认</div>`;
+    }
+    if (data.unqualified) {
+      data.items.forEach(item => {
+        html += `<div class="prep-item"><div class="prep-item-icon">${item.icon}</div><div class="prep-item-text"><h4>${item.title}</h4><p>${item.desc}</p></div></div>`;
+      });
+      if (GROUP === 'passive') {
+        document.getElementById('prepBtn').textContent = '准备完毕，进入填报';
+        document.getElementById('prepBtn').className = 'prep-btn';
+        document.getElementById('prepBtn').onclick = enterForm;
+      } else {
+        document.getElementById('prepBtn').textContent = '知道了';
+        document.getElementById('prepBtn').className = 'prep-btn back';
+        document.getElementById('prepBtn').onclick = closePrepModal;
+      }
+    } else {
+      data.items.forEach(item => {
+        html += `<div class="prep-item"><div class="prep-item-icon">${item.icon}</div><div class="prep-item-text"><h4>${item.title}</h4><p>${item.desc}</p></div></div>`;
+      });
+      document.getElementById('prepBtn').textContent = '准备完毕，进入填报';
+      document.getElementById('prepBtn').className = 'prep-btn';
+    document.getElementById('prepBtn').onclick = enterForm;
+  }
+
+  document.getElementById('prepContent').innerHTML = html;
+  document.getElementById('prepOverlay').classList.add('show');
+  document.getElementById('prepModal').classList.add('show');
+}
+
+function closePrepModal() {
+  document.getElementById('prepOverlay').classList.remove('show');
+  document.getElementById('prepModal').classList.remove('show');
+}
+
+var infantChildren = [];
+function goInfantChildSelect() {
+  go('infant-child-select');
+  renderInfantChildList();
+}
+function renderInfantChildList() {
+  var listEl = document.getElementById('infant-child-list');
+  var emptyEl = document.getElementById('infant-child-empty');
+  var addBtnWrap = document.getElementById('infant-child-add-btn-wrap');
+  var addSection = document.getElementById('infant-child-add-section');
+  addSection.style.display = 'none';
+  if (infantChildren.length === 0) {
+    listEl.innerHTML = '';
+    emptyEl.style.display = 'flex';
+    addBtnWrap.style.display = 'block';
+  } else {
+    emptyEl.style.display = 'none';
+    addBtnWrap.style.display = 'block';
+    var html = '';
+    infantChildren.forEach(function(c, i) {
+      var selected = c.selected ? 'background:#e8f0fe;border-left:3px solid #1677ff;' : '';
+      html += '<div style="padding:14px 16px;background:white;border-bottom:0.5px solid #eee;cursor:pointer;' + selected + '" onclick="selectInfantChild(' + i + ')">';
+      html += '<div style="font-size:15px;font-weight:500;">' + c.name + '</div>';
+      html += '<div style="font-size:12px;color:#999;margin-top:4px;">' + c.id + ' | ' + c.birth + '</div>';
+      html += '</div>';
+    });
+    listEl.innerHTML = html;
+  }
+}
+function showInfantChildAdd() {
+  document.getElementById('infant-child-add-section').style.display = 'block';
+  document.getElementById('ic-name').value = '';
+  document.getElementById('ic-id').value = '';
+  document.getElementById('ic-birth').value = '';
+}
+function cancelInfantChildAdd() {
+  document.getElementById('infant-child-add-section').style.display = 'none';
+}
+function saveInfantChild() {
+  var name = document.getElementById('ic-name').value.trim();
+  var id = document.getElementById('ic-id').value.trim();
+  var birth = document.getElementById('ic-birth').value.trim();
+  if (!name || !id || !birth) { showToast('请填写完整信息', 'mini'); return; }
+  infantChildren.push({ name: name, id: id, birth: birth, selected: false });
+  document.getElementById('infant-child-add-section').style.display = 'none';
+  renderInfantChildList();
+  showToast('添加成功');
+}
+function selectInfantChild(idx) {
+  infantChildren.forEach(function(c, i) { c.selected = (i === idx); });
+  var c = infantChildren[idx];
+  document.getElementById('i-child-display').textContent = c.name;
+  document.getElementById('i-child-display').style.color = '#333';
+  go('deduct-infant');
+}
+
+function enterForm() {
+  closePrepModal();
+  const data = PREP_DATA[currentPrepType];
+  if (data.formPage) {
+    setTimeout(() => {
+      go(data.formPage);
+      setTimeout(() => showFormTip(data.formPage), 400);
+    }, 200);
+  }
+}
+
+function showFormTip(formPage) {
+  const tipData = FORM_TIPS[formPage];
+  if (!tipData) return;
+  const loadingText = GROUP === 'high' ? '正在调用其他部门数据...' : '正在为您带入信息...';
+  document.getElementById('tipLoadingText').textContent = loadingText;
+  document.getElementById('tipModalLoading').style.display = 'block';
+  document.getElementById('tipModalContent').style.display = 'none';
+  document.getElementById('tipModalOverlay').classList.add('show');
+  document.getElementById('tipModal').classList.add('show');
+  setTimeout(() => {
+    document.getElementById('tipModalLoading').style.display = 'none';
+    document.getElementById('tipModalContent').style.display = 'block';
+    document.getElementById('tipModalText').textContent = tipData.text;
+  }, 1500);
+}
+
+function closeTipModal() {
+  document.getElementById('tipModalOverlay').classList.remove('show');
+  document.getElementById('tipModal').classList.remove('show');
+}
+
+function toggleFloatPanel() {
+  const panel = document.getElementById('floatPanel');
+  const overlay = document.getElementById('floatOverlay');
+  const fab = document.getElementById('fabBtn');
+  if (panel.classList.contains('show')) {
+    closeFloatPanel();
+  } else {
+    panel.classList.add('show');
+    overlay.classList.add('show');
+    fab.classList.remove('visible');
+    TRACK.openInfoCardCount++;
+    TRACK.openInfoCard = 1;
+  }
+}
+
+function closeFloatPanel() {
+  document.getElementById('floatPanel').classList.remove('show');
+  document.getElementById('floatOverlay').classList.remove('show');
+  document.getElementById('fabBtn').classList.add('visible');
+}
+
+function copyItem(el, text) {
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = el.querySelector('.float-item-copy');
+    btn.textContent = '已复制'; btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = '复制'; btn.classList.remove('copied'); }, 1500);
+  }).catch(() => {
+    const ta = document.createElement('textarea'); ta.value = text;
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    const btn = el.querySelector('.float-item-copy');
+    btn.textContent = '已复制'; btn.classList.add('copied');
+    setTimeout(() => { btn.textContent = '复制'; btn.classList.remove('copied'); }, 1500);
+  });
+}
+
+function copyAll() {
+  const texts = [];
+  document.querySelectorAll('.float-item-text').forEach(el => texts.push(el.textContent));
+  const allText = texts.join('\n');
+  navigator.clipboard.writeText(allText).then(() => {
+    alert('全部信息已复制到剪贴板');
+  }).catch(() => {
+    const ta = document.createElement('textarea'); ta.value = allText;
+    ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    alert('全部信息已复制到剪贴板');
+  });
+}
+
+
+function showPolicyFloat() {
+  document.getElementById('policyFloatOverlay').classList.add('show');
+  document.getElementById('policyFloatPanel').classList.add('show');
+  TRACK.policyViewCount++;
+  TRACK.policyViewStartTime = Date.now();
+}
+function closePolicyFloat() {
+  document.getElementById('policyFloatOverlay').classList.remove('show');
+  document.getElementById('policyFloatPanel').classList.remove('show');
+  if (TRACK.policyViewStartTime) {
+    TRACK.policyViewDuration += Math.round((Date.now() - TRACK.policyViewStartTime) / 1000);
+    TRACK.policyViewStartTime = null;
+  }
+}
+function switchPolicyTab(id) {
+  document.querySelectorAll('.policy-float-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.policy-float-tab').forEach(t => {
+    if (t.getAttribute('onclick') && t.getAttribute('onclick').indexOf(id) !== -1) t.classList.add('active');
+  });
+  document.querySelectorAll('[id^="policy-content-"]').forEach(c => c.style.display = 'none');
+  document.getElementById('policy-content-' + id).style.display = 'block';
+}
+function togglePsItem(el) {
+  el.classList.toggle('selected');
+  var chk = el.querySelector('.ps-check');
+  chk.textContent = el.classList.contains('selected') ? '✓' : '';
+}
+function confirmProjectSelect() {
+  var items = document.querySelectorAll('.ps-item');
+  var selected = [];
+  items.forEach(function(item) {
+    if (item.classList.contains('selected')) selected.push(item.getAttribute('data-type'));
+  });
+  var required = SERVICE === 'simple' ? ['rent','edu'] : ['children','edu','housing','elderly'];
+  var match = required.length === selected.length && required.every(function(r) { return selected.indexOf(r) !== -1; });
+  if (!match) {
+    showToast('请根据个人信息确认需要申报的业务', 'mini');
+    return;
+  }
+  go('app-home');
+}
+/* ===== 字段格式校验 ===== */
+function validateField(id, rule) {
+  const el = document.getElementById(id);
+  if (!el) return true;
+  const val = el.value.trim();
+  if (!val) return true;
+  switch(rule) {
+    case 'phone': return /^1[3-9]\d{9}$/.test(val);
+    case 'idcard': return /^\d{15}$|^\d{17}[\dXx]$/.test(val);
+    case 'email': return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val);
+    case 'date': return /^\d{4}年\d{1,2}月(\d{1,2}日)?$/.test(val);
+    case 'month': return /^\d{4}年\d{1,2}月$/.test(val);
+    case 'number': return /^\d+$/.test(val);
+    default: return true;
+  }
+}
+
+
+
+
+/* ===== app首页滑动指示器动画 ===== */
+var _sliderTimer = null;
+var _sliderPos = 0;
+function startHomeSlider() {
+  var indicator = document.getElementById('homeSliderIndicator');
+  if (!indicator) return;
+  _sliderPos = 0;
+  indicator.style.left = '0';
+  if (_sliderTimer) clearInterval(_sliderTimer);
+  _sliderTimer = setInterval(function() {
+    _sliderPos = _sliderPos === 0 ? 1 : 0;
+    indicator.style.left = _sliderPos === 0 ? '0' : 'calc(50% + 6px)';
+  }, 1500);
+}
+
+function initHome() {
+  updateBadges();
+  startHomeSlider();
+  closeFloatPanel();
+  applyGroupGrid();
+  showHomeTip();
+}
+
+const DISABLED_ITEMS = ['medical','rent','infant'];
+const DEDUCT_COUNT = 4;
+const PERSON_DATA = {"simple": {"phone": "13800001234", "email": "123456@qq.com", "address": "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u897f\u6e56\u533a\u6587\u4e09\u8def88\u53f73\u5e621202\u5ba4", "rentAddress": "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02\u897f\u6e56\u533a\u6587\u4e09\u8def88\u53f73\u5e621202\u5ba4", "rentStart": "2025\u5e741\u6708", "rentEnd": "2025\u5e7412\u6708", "rentLlType": "\u81ea\u7136\u4eba", "rentCity": "\u6d59\u6c5f\u7701\u676d\u5dde\u5e02", "eduType": "\u804c\u4e1a\u8d44\u683c\u7ee7\u7eed\u6559\u80b2", "eduQualType": "\u4e13\u4e1a\u6280\u672f\u4eba\u5458\u804c\u4e1a\u8d44\u683c", "eduCertName": "\u8ba1\u7b97\u673a\u6280\u672f\u4e0e\u8f6f\u4ef6\u4e13\u4e1a\u6280\u672f\u8d44\u683c", "eduCertDate": "2025\u5e745\u6708", "eduCertNo": "ZJ2025-RJ-08216", "eduIssuer": "\u6d59\u6c5f\u7701\u4eba\u529b\u8d44\u6e90\u548c\u793e\u4f1a\u4fdd\u969c\u5385", "childId": "", "childName": "", "elderlyId": "", "elderlyName": "", "coName": "", "coId": "", "housingAddress": "", "childrenRatio": "", "housingRatio": "", "elderlyOnly": ""}, "complex": {"phone": "13900005678", "email": "123456@qq.com", "address": "\u5e7f\u4e1c\u7701\u5e7f\u5dde\u5e02\u5929\u6cb3\u533a\u73e0\u6c5f\u65b0\u57ce\u82b1\u57ce\u8def66\u53f72\u680b1801\u5ba4", "rentAddress": "", "rentStart": "", "rentEnd": "", "rentLlType": "", "rentCity": "", "childId": "110101201604180052", "childName": "\u738b\u4e00\u8bfa", "childrenRatio": "50%", "elderlyId": "110101195705050067", "elderlyName": "\u738b\u5efa\u56fd", "elderlyRelation": "\u7236\u4eb2", "elderlyOnly": "\u72ec\u751f\u5b50\u5973", "eduType": "\u5b66\u5386\uff08\u5b66\u4f4d\uff09\u7ee7\u7eed\u6559\u80b2", "eduLevel": "\u7855\u58eb\u7814\u7a76\u751f", "eduEnroll": "2024\u5e749\u6708", "eduGrad": "2027\u5e746\u6708", "housingAddress": "\u5e7f\u4e1c\u7701\u5e7f\u5dde\u5e02\u5929\u6cb3\u533a\u73e0\u6c5f\u65b0\u57ce\u82b1\u57ce\u8def66\u53f72\u680b1801\u5ba4", "housingCertType": "\u4e0d\u52a8\u4ea7\u6743\u8bc1", "housingLoanType": "\u5546\u4e1a\u8d37\u6b3e", "housingBank": "\u4e2d\u56fd\u5efa\u8bbe\u94f6\u884c\u5e7f\u5dde\u5929\u6cb3\u652f\u884c", "housingContract": "GZDK-2022-0715-3896", "housingMonths": "240", "housingFirstDate": "2022\u5e748\u670815\u65e5", "housingRatio": "100%", "coName": "", "coId": ""}};
+
+function applyGroupGrid() {
+  const items = document.querySelectorAll('.deduct-grid-item');
+  items.forEach(item => {
+    const type = item.getAttribute('data-type');
+    if (GROUP !== 'passive' && DISABLED_ITEMS.indexOf(type) !== -1) {
+      item.classList.add('disabled');
+    }
+  });
+}
+
+function showHomeTip() {
+  if (GROUP === 'passive') return;
+  if (window._homeTipShown) return;
+  window._homeTipShown = true;
+  const loadingText = '正在识别可填报项目...';
+  document.getElementById('tipLoadingText').textContent = loadingText;
+  document.getElementById('tipModalLoading').style.display = 'block';
+  document.getElementById('tipModalContent').style.display = 'none';
+  document.getElementById('tipModalOverlay').classList.add('show');
+  document.getElementById('tipModal').classList.add('show');
+  setTimeout(() => {
+    document.getElementById('tipModalLoading').style.display = 'none';
+    document.getElementById('tipModalContent').style.display = 'block';
+    document.getElementById('tipModalText').textContent = '已识别到您有' + DEDUCT_COUNT + '项专项附加扣除项目需要填写，请完成填报。';
+  }, 1500);
+}
+
+function updateBadges() {
+  const map = { children: 0, edu: 1, housing: 3, elderly: 5 };
+  Object.keys(map).forEach(k => {
+    const items = document.querySelectorAll('.deduct-grid-item');
+    const idx = map[k];
+    const item = items[idx];
+    if (!item) return;
+    let badge = item.querySelector('.deduct-grid-badge');
+    if (savedDeducts[k]) {
+      if (!badge) { badge = document.createElement('span'); badge.className = 'deduct-grid-badge'; item.appendChild(badge); }
+      badge.textContent = '已填报';
+    } else {
+      if (badge) badge.remove();
+    }
+  });
+}
+
+function autoFill(type) {
+  setTimeout(() => {    if (type === 'children') {
+      setInput('c-phone', '13900005678');
+      setInput('c-email', '123456@qq.com');
+      setInput('c-address-personal', '广东省广州市天河区珠江新城花城路66号2栋1801室');
+      setSelect('c-spouse', '有配偶');
+      toggleSpouseDetail('c', '有配偶');
+      setSelect('c-spouse-relation', '配偶');
+      setInput('c-spouse-id', '110101198506240045');
+      setInput('c-spouse-name', '刘婷');
+      setInput('c-spouse-nationality', '中华人民共和国');
+      setInput('c-spouse-marriage-start', '2008年10月');
+      setSelect('c-gender', '女');
+      setInput('c-id', '110101201604180052');
+      setInput('c-name', '王一诺');
+      setInput('c-nationality', '中华人民共和国');
+      setInput('c-birth', '2016年4月18日');
+      setSelect('c-stage', '义务教育');
+      setInput('c-start', '2022年9月');
+      setInput('c-end', '2028年8月');
+      setInput('c-country', '中华人民共和国');
+      setInput('c-school', '广州市天河区第一小学');
+    }
+    if (type === 'edu') {
+      setInput('e-phone', '13900005678');
+      setInput('e-email', '123456@qq.com');
+      setInput('e-address', '广东省广州市天河区珠江新城花城路66号2栋1801室');
+      setSelect('e-type', '学历（学位）继续教育');
+      setSelect('e-level', '硕士研究生');
+      setInput('e-enroll', '2024年9月');
+      setInput('e-grad', '2027年6月');
+    }
+    if (type === 'housing') {
+      setInput('h-phone', '13900005678');
+      setInput('h-email', '123456@qq.com');
+      setInput('h-address-personal', '广东省广州市天河区珠江新城花城路66号2栋1801室');
+      setSelect('h-spouse', '有配偶');
+      toggleSpouseDetail('h', '有配偶');
+      setSelect('h-spouse-relation', '配偶');
+      setInput('h-spouse-id', '110101198506240045');
+      setInput('h-spouse-name', '刘婷');
+      setInput('h-spouse-nationality', '中华人民共和国');
+      setInput('h-spouse-marriage-start', '2008年10月');
+      setSelect('h-cert-type', '不动产权证');
+      setInput('h-cert-no', '粤（2022）广州市不动产权第008216号');
+      setInput('h-address', '广东省广州市天河区珠江新城花城路66号2栋1801室');
+      setSelect('h-loan-type', '商业贷款');
+      setInput('h-bank', '中国建设银行广州天河支行');
+      setInput('h-contract', 'GZDK-2022-0715-3896');
+      setInput('h-first-date', '2022年8月15日');
+      setInput('h-months', '240');
+    }
+    if (type === 'elderly') {
+      setInput('el-phone', '13900005678');
+      setInput('el-email', '123456@qq.com');
+      setInput('el-address', '广东省广州市天河区珠江新城花城路66号2栋1801室');
+      setSelect('el-relation', '父亲');
+      setInput('el-id', '110101195705050067');
+      setInput('el-name', '王建国');
+      setInput('el-nationality', '中华人民共和国');
+      setInput('el-birth', '1957年5月5日');
+      setSelect('el-only', '独生子女');
+      toggleElderlyMode();
+    }
+  }, 500);
+}
+
+function setInput(id, value) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  el.value = value;
+  el.classList.add('prefilled');
+}
+
+function setSelect(id, value) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  for (let i = 0; i < el.options.length; i++) {
+    if (el.options[i].value === value || el.options[i].text === value) {
+      el.selectedIndex = i;
+      el.classList.add('prefilled');
+      break;
+    }
+  }
+}
+
+function toggleElderlyMode() {
+  const sel = document.getElementById('el-only');
+  if (!sel) return;
+  const val = sel.value;
+  const nonSingle = document.getElementById('el-section-non-single');
+  const single = document.getElementById('el-section-single');
+  if (val === '独生子女') {
+    if (nonSingle) nonSingle.style.display = 'none';
+    if (single) single.style.display = 'block';
+  } else {
+    if (nonSingle) nonSingle.style.display = 'block';
+    if (single) single.style.display = 'none';
+  }
+}
+
+function simulateUpload(el) {
+  if (el.classList.contains('uploaded')) return;
+  /* 首次点击上传区域时提示 */
+  if (!window._uploadHinted) {
+    window._uploadHinted = true;
+    showToast('材料仅为模拟上传，无需真实文件', 'mini');
+  }
+  el.classList.add('uploaded');
+  var progressId = 'upg-' + Date.now();
+  el.innerHTML = '<span class="form-upload-add" style="background:#fff7e6;color:#fa8c16;">⏳</span><span>正在上传材料...</span><div class="upload-progress-wrap"><div class="upload-progress-bar-bg"><div class="upload-progress-bar" id="' + progressId + '"></div></div><div class="upload-progress-text" id="' + progressId + '-t">0%</div></div>';
+  var bar = document.getElementById(progressId);
+  var txt = document.getElementById(progressId + '-t');
+  var pct = 0;
+  var timer = setInterval(function() {
+    pct += Math.floor(Math.random() * 15) + 5;
+    if (pct >= 100) { pct = 100; clearInterval(timer); }
+    bar.style.width = pct + '%';
+    txt.textContent = pct + '%';
+    if (pct === 100) {
+      setTimeout(function() {
+        el.innerHTML = '<span class="form-upload-add" style="background:#d9f7be;color:#52c41a;">✓</span><span>已上传证明材料</span>';
+      }, 400);
+    }
+  }, 200);
+}
+
+function setUpload(id) {
+  const el = document.querySelector('[data-upload-id="' + id + '"]');
+  if (el) simulateUpload(el);
+}
+
+function updateCertOptions(type) {
+  var certSelect = document.getElementById('e-cert-name');
+  certSelect.innerHTML = '<option value="">请选择</option>';
+  if (!type) return;
+  var profCerts = [
+    '计算机技术与软件专业技术资格', '教师资格', '注册消防工程师', '法律职业资格',
+    '中国委托公证人资格(香港、澳门)', '注册会计师', '民用核安全设备无损检验人员',
+    '民用核设施操纵人员', '注册核安全工程师', '注册建筑师', '监理工程师',
+    '房地产估价师', '造价工程师', '注册城乡规划师', '建造师', '注册结构工程师',
     '注册土木工程师', '注册化工工程师', '注册电气工程师', '注册公用设备工程师',
     '注册环保工程师', '注册验船师', '船员资格(含船员、渔业船员)', '执业兽医',
     '拍卖师', '演出经纪人员资格', '医师', '乡村医生', '人体器官移植医师',
